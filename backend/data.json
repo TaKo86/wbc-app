@@ -1,0 +1,2788 @@
+{
+ "champions": [
+  {
+   "name": "Bubba Tairua-Bracken",
+   "gender": "F",
+   "level": "Pro",
+   "kg": "53.5",
+   "division": "Bantamweight (53.5kg)",
+   "since": "2025-08-09",
+   "opponent": "Sara Siraj",
+   "promotion": "TMT Showtime",
+   "defences": 0,
+   "gym": "Tihipuke Muay Thai",
+   "am": [
+    7,
+    3,
+    0
+   ],
+   "pro": [
+    3,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Geovana Peres",
+   "gender": "F",
+   "level": "Pro",
+   "kg": "+90.7",
+   "division": "Heavyweight (+90.7kg)",
+   "since": "2024-06-22",
+   "opponent": "Faith McMah",
+   "promotion": "Lights Out",
+   "defences": 0,
+   "gym": "City Lee Gar",
+   "am": [
+    4,
+    0,
+    0
+   ],
+   "pro": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sam Fitzgerald",
+   "gender": "M",
+   "level": "Pro",
+   "kg": "69.8",
+   "division": "Super-welterweight (69.8kg)",
+   "since": "2026-02-21",
+   "opponent": "Joe Parsons",
+   "promotion": "Mae Mai 2",
+   "defences": 0,
+   "gym": "Hitman Lee Gar",
+   "am": [
+    13,
+    2,
+    0
+   ],
+   "pro": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Michael Lynch",
+   "gender": "M",
+   "level": "Pro",
+   "kg": "72.6",
+   "division": "Middleweight (72.6kg)",
+   "since": "2025-06-27",
+   "opponent": "Jon Anderson",
+   "promotion": "Mae Mai 1",
+   "defences": 1,
+   "gym": "Hitman Lee Gar",
+   "am": [
+    9,
+    7,
+    0
+   ],
+   "pro": [
+    2,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "Titus Proctor",
+   "gender": "M",
+   "level": "World",
+   "kg": "76.2",
+   "division": "World Super-middleweight (76.2kg)",
+   "since": "2025-12-05",
+   "opponent": "Daniel Bonner (UK)",
+   "promotion": "Lights Out",
+   "defences": 0,
+   "gym": "Tihipuke Muay Thai",
+   "am": [
+    17,
+    2,
+    0
+   ],
+   "pro": [
+    22,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Waelin Kerekere",
+   "gender": "M",
+   "level": "Amateur",
+   "kg": "61.25",
+   "division": "Lightweight (61.25kg)",
+   "since": "2026-06-21",
+   "opponent": "Tomoki Huskinson",
+   "promotion": "Mae Mai",
+   "defences": 0,
+   "gym": "SMAC",
+   "am": [
+    9,
+    6,
+    0
+   ],
+   "pro": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bayleigh McNamara",
+   "gender": "M",
+   "level": "Amateur",
+   "kg": "63.5",
+   "division": "Super-lightweight (63.5kg)",
+   "since": "2026-06-21",
+   "opponent": "Shian Gao",
+   "promotion": "Mae Mai",
+   "defences": 0,
+   "gym": "Remuera Lee Gar",
+   "am": [
+    8,
+    2,
+    0
+   ],
+   "pro": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Kyrie Choudhury",
+   "gender": "M",
+   "level": "Amateur",
+   "kg": "66.6",
+   "division": "Welterweight (66.6kg)",
+   "since": "2025-06-27",
+   "opponent": "Shaun Spencer",
+   "promotion": "Mae Mai 1",
+   "defences": 1,
+   "gym": "Team Hardcore",
+   "am": [
+    8,
+    2,
+    0
+   ],
+   "pro": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Benny McKay",
+   "gender": "M",
+   "level": "Amateur",
+   "kg": "69.8",
+   "division": "Super-welterweight (69.8kg)",
+   "since": "2026-08-21",
+   "opponent": "Jaycob Kerapa",
+   "promotion": "Art of War",
+   "defences": 0,
+   "gym": "City Lee Gar",
+   "am": [
+    5,
+    1,
+    0
+   ],
+   "pro": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Thomas Lewis",
+   "gender": "M",
+   "level": "Amateur",
+   "kg": "72.6",
+   "division": "Middleweight (72.6kg)",
+   "since": "2026-04-17",
+   "opponent": "Lukas Taia",
+   "promotion": "Art Of War 28",
+   "defences": 0,
+   "gym": "MTI Wellington",
+   "am": [
+    9,
+    1,
+    0
+   ],
+   "pro": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Damon Maireroa",
+   "gender": "M",
+   "level": "Amateur",
+   "kg": "76.2",
+   "division": "Super-middleweight (76.2kg)",
+   "since": "2026-08-21",
+   "opponent": "Kees Verheyen",
+   "promotion": "Art of War",
+   "defences": 0
+  },
+  {
+   "name": "Cameron Adkin",
+   "gender": "M",
+   "level": "Amateur",
+   "kg": "79.3",
+   "division": "Light-heavyweight (79.3kg)",
+   "since": "2025-08-08",
+   "opponent": "Quade Samuels",
+   "promotion": "Art Of War 26",
+   "defences": 0,
+   "gym": "City Lee Gar",
+   "am": [
+    10,
+    1,
+    0
+   ],
+   "pro": [
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "Karaitiana Adams",
+   "gender": "M",
+   "level": "Amateur",
+   "kg": "90.7",
+   "division": "Cruiserweight (90.7kg)",
+   "since": "2025-08-09",
+   "opponent": "Taratu Mankelow",
+   "promotion": "TMT Showtime",
+   "defences": 1,
+   "gym": "Tihipuke Muaythai",
+   "am": [
+    10,
+    4,
+    0
+   ],
+   "pro": [
+    1,
+    0,
+    0
+   ]
+  }
+ ],
+ "divisions": {
+  "F": [
+   {
+    "code": "BW",
+    "kg": "53.5",
+    "name": "Bantamweight",
+    "ranks": [
+     {
+      "name": "Karlee Winiata",
+      "gym": "THe Fight Shop",
+      "am": [
+       5,
+       2,
+       0
+      ],
+      "pro": [
+       2,
+       2,
+       0
+      ],
+      "tier": "pro",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Sara Siraj",
+      "gym": "Beyond Muay Thai",
+      "am": [
+       6,
+       6,
+       0
+      ],
+      "pro": [
+       0,
+       1,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Gabby Kane",
+      "gym": "Auckland MMA",
+      "am": [
+       3,
+       3,
+       0
+      ],
+      "pro": [
+       9,
+       7,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Meg Barlow",
+      "gym": "Alpha Muay Thai",
+      "am": [
+       6,
+       3,
+       0
+      ],
+      "pro": [
+       0,
+       2,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     }
+    ],
+    "proChamp": "Bubba Tairua-Bracken",
+    "amChamp": "",
+    "worldChamp": ""
+   },
+   {
+    "code": "SBW",
+    "kg": "55.3",
+    "name": "Super-bantamweight",
+    "ranks": [
+     {
+      "name": "Lorraine Robson",
+      "gym": "Ghostfist Lee Gar",
+      "am": [
+       6,
+       5,
+       1
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs Thai experience",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Yasmine Knight",
+      "gym": "City Kickboxing",
+      "am": [
+       3,
+       0,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs Thai experience",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Jordyn Tuhiwai",
+      "gym": "VR MMA",
+      "am": [
+       3,
+       0,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs Thai experience",
+      "flag": "",
+      "champ": ""
+     }
+    ],
+    "proChamp": "",
+    "amChamp": "",
+    "worldChamp": ""
+   },
+   {
+    "code": "FW",
+    "kg": "57.1",
+    "name": "Featherweight",
+    "ranks": [
+     {
+      "name": "Jenna Kueabram",
+      "gym": "Himan Lee Gar",
+      "am": [
+       0,
+       0,
+       0
+      ],
+      "pro": [
+       23,
+       11,
+       1
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Wendy Talbot",
+      "gym": "City Kickboxing",
+      "am": [
+       12,
+       6,
+       0
+      ],
+      "pro": [
+       13,
+       4,
+       1
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Rayven Simpson",
+      "gym": "ROA",
+      "am": [
+       8,
+       4,
+       0
+      ],
+      "pro": [
+       1,
+       1,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     }
+    ],
+    "proChamp": "",
+    "amChamp": "",
+    "worldChamp": ""
+   },
+   {
+    "code": "SFW",
+    "kg": "58.9",
+    "name": "Super-featherweight",
+    "ranks": [
+     {
+      "name": "Ishtar Mackey-Huriwai",
+      "gym": "Rangataua O Aotearoa",
+      "am": [
+       16,
+       9,
+       0
+      ],
+      "pro": [
+       3,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Rishon Harris",
+      "gym": "Fight Science Queenstown",
+      "am": [
+       9,
+       5,
+       0
+      ],
+      "pro": [
+       1,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Amara Jones",
+      "gym": "Freestyle FC",
+      "am": [
+       7,
+       4,
+       0
+      ],
+      "pro": [
+       0,
+       1,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Elina Andrew",
+      "gym": "All Day Fitness",
+      "am": [
+       6,
+       3,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Sherman Tunggalag Wang",
+      "gym": "Hitman Lee Gar",
+      "am": [
+       4,
+       4,
+       2
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Shannel Flavell",
+      "gym": "Fight Dept",
+      "am": [
+       4,
+       3,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Jessica Beswick",
+      "gym": "Urban Sport",
+      "am": [
+       4,
+       0,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     }
+    ],
+    "proChamp": "",
+    "amChamp": "",
+    "worldChamp": ""
+   },
+   {
+    "code": "LW",
+    "kg": "61.25",
+    "name": "Lightweight",
+    "ranks": [
+     {
+      "name": "Deanne Philpott",
+      "gym": "ETK",
+      "am": [
+       11,
+       4,
+       0
+      ],
+      "pro": [
+       4,
+       1,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     }
+    ],
+    "proChamp": "",
+    "amChamp": "",
+    "worldChamp": ""
+   },
+   {
+    "code": "SLW",
+    "kg": "63.5",
+    "name": "Super-lightweight",
+    "ranks": [
+     {
+      "name": "Melanie Berg",
+      "gym": "MTI Wellington",
+      "am": [
+       12,
+       1,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "am",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Waimatao Hiro",
+      "gym": "Team Downs",
+      "am": [
+       12,
+       5,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "McKenzie Oneil",
+      "gym": "Shuriken",
+      "am": [
+       1,
+       0,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Jules Vassalos",
+      "gym": "Hurto Gym",
+      "am": [
+       9,
+       0,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "am",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     }
+    ],
+    "proChamp": "",
+    "amChamp": "",
+    "worldChamp": ""
+   },
+   {
+    "code": "WW",
+    "kg": "66.6",
+    "name": "Welterweight",
+    "ranks": [
+     {
+      "name": "Emma Diprose",
+      "gym": "Evolution Muay Thai",
+      "am": [
+       16,
+       7,
+       0
+      ],
+      "pro": [
+       2,
+       0,
+       0
+      ],
+      "tier": "pro",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Bekey Burgess",
+      "gym": "Spartan Kickboxing",
+      "am": [
+       7,
+       1,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Katie Lorraine",
+      "gym": "City Lee Gar",
+      "am": [
+       4,
+       0,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Jaylee Savage",
+      "gym": "Paramount MuayThai",
+      "am": [
+       1,
+       1,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     }
+    ],
+    "proChamp": "",
+    "amChamp": "",
+    "worldChamp": ""
+   },
+   {
+    "code": "CW",
+    "kg": "90.7",
+    "name": "Cruiserweight",
+    "ranks": [
+     {
+      "name": "Tiana Barlow",
+      "gym": "House of Pain",
+      "am": [
+       3,
+       2,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Tash Tuuta",
+      "gym": "South Island Lee Gar",
+      "am": [
+       4,
+       5,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Saphrine Carmichael",
+      "gym": "Scorpion Claw Fight Club",
+      "am": [
+       1,
+       0,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Alana Tuteru",
+      "gym": "SALT",
+      "am": [
+       1,
+       0,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Alejandra Penaranda",
+      "gym": "Tihipuke Muaythai",
+      "am": [
+       0,
+       1,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     }
+    ],
+    "proChamp": "",
+    "amChamp": "",
+    "worldChamp": ""
+   },
+   {
+    "code": "HW",
+    "kg": "+90.7",
+    "name": "Heavyweight",
+    "ranks": [
+     {
+      "name": "Saph Carmichael",
+      "gym": "Scorpion Claw Fight Club",
+      "am": [
+       1,
+       0,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Jessica Renshaw",
+      "gym": "Phoenix Rising",
+      "am": [
+       0,
+       1,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     }
+    ],
+    "proChamp": "Geovana Peres",
+    "amChamp": "",
+    "worldChamp": ""
+   }
+  ],
+  "M": [
+   {
+    "code": "SFW",
+    "kg": "58.9",
+    "name": "Super-featherweight",
+    "ranks": [
+     {
+      "name": "Ongjaneh Rott",
+      "gym": "ETK",
+      "am": [
+       6,
+       2,
+       0
+      ],
+      "pro": [
+       4,
+       2,
+       0
+      ],
+      "tier": "pro",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Anwar Alhmidi",
+      "gym": "Paramount Muay Thai",
+      "am": [
+       9,
+       4,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Ryder Onfrey",
+      "gym": "Forged Rotorua",
+      "am": [
+       4,
+       7,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Caleb Neville",
+      "gym": "",
+      "am": null,
+      "pro": null,
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Shayde Pomare",
+      "gym": "Unity Fitness",
+      "am": [
+       5,
+       2,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Oscar Raethel",
+      "gym": "Warrior Training Academy",
+      "am": [
+       4,
+       3,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Jiteesh Deo",
+      "gym": "Ronin Gym Wellington",
+      "am": [
+       2,
+       1,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     }
+    ],
+    "proChamp": "",
+    "amChamp": "",
+    "worldChamp": ""
+   },
+   {
+    "code": "LW",
+    "kg": "61.25",
+    "name": "Lightweight",
+    "ranks": [
+     {
+      "name": "Zion Perry",
+      "gym": "Warrior Training Academy",
+      "am": [
+       13,
+       5,
+       0
+      ],
+      "pro": [
+       3,
+       1,
+       1
+      ],
+      "tier": "pro",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Waelin Kerekere",
+      "gym": "SMAC",
+      "am": [
+       9,
+       6,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": "Amateur"
+     },
+     {
+      "name": "Shian Gao",
+      "gym": "Kings Academy",
+      "am": [
+       5,
+       2,
+       1
+      ],
+      "pro": [
+       2,
+       2,
+       1
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Hami Tamati-Wiparata",
+      "gym": "All Day Fitness",
+      "am": [
+       10,
+       5,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "am",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     }
+    ],
+    "proChamp": "",
+    "amChamp": "Waelin Kerekere",
+    "worldChamp": ""
+   },
+   {
+    "code": "SLW",
+    "kg": "63.5",
+    "name": "Super-lightweight",
+    "ranks": [
+     {
+      "name": "Lucas McAdam",
+      "gym": "Jackals Gym",
+      "am": [
+       38,
+       18,
+       0
+      ],
+      "pro": [
+       6,
+       2,
+       0
+      ],
+      "tier": "pro",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Ben Spears",
+      "gym": "Strikeforce",
+      "am": [
+       18,
+       7,
+       0
+      ],
+      "pro": [
+       9,
+       2,
+       0
+      ],
+      "tier": "pro",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Ben Karam",
+      "gym": "Jackals Martial Arts",
+      "am": [
+       9,
+       2,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "Vacated title",
+      "champ": ""
+     },
+     {
+      "name": "Julian Jensen",
+      "gym": "Noble Fight Systems",
+      "am": [
+       10,
+       2,
+       1
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "Vacated title",
+      "champ": ""
+     },
+     {
+      "name": "Bayleigh McNamara",
+      "gym": "Remuera Lee Gar",
+      "am": [
+       8,
+       2,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": "Amateur"
+     }
+    ],
+    "proChamp": "",
+    "amChamp": "Bayleigh McNamara",
+    "worldChamp": ""
+   },
+   {
+    "code": "WW",
+    "kg": "66.6",
+    "name": "Welterweight",
+    "ranks": [
+     {
+      "name": "Michael Isaac",
+      "gym": "House of Pain",
+      "am": [
+       16,
+       7,
+       0
+      ],
+      "pro": [
+       1,
+       3,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Dion King",
+      "gym": "Aldephos",
+      "am": [
+       15,
+       4,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Kyrie Choudbury",
+      "gym": "Team Hardcore",
+      "am": [
+       8,
+       2,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": "Amateur"
+     },
+     {
+      "name": "Freeman Dombroski",
+      "gym": "Kenshikai",
+      "am": [
+       9,
+       5,
+       0
+      ],
+      "pro": [
+       7,
+       2,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Andrew Fraenkel",
+      "gym": "MTI Wellington",
+      "am": [
+       11,
+       3,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Paul Tonga",
+      "gym": "Jackals Gym",
+      "am": [
+       8,
+       4,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "am",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Anton Freestone",
+      "gym": "Connect Striking",
+      "am": [
+       6,
+       1,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "am",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Dayne Burke",
+      "gym": "Rotorua Lee Gar",
+      "am": [
+       5,
+       4,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "am",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     }
+    ],
+    "proChamp": "",
+    "amChamp": "Kyrie Choudhury",
+    "worldChamp": ""
+   },
+   {
+    "code": "SWW",
+    "kg": "69.8",
+    "name": "Super-welterweight",
+    "ranks": [
+     {
+      "name": "Sam Fitzgerald",
+      "gym": "Hitman Lee Gar",
+      "am": [
+       13,
+       2,
+       0
+      ],
+      "pro": [
+       1,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": "Pro"
+     },
+     {
+      "name": "Rex Cooper",
+      "gym": "Strikeforce",
+      "am": [
+       6,
+       0,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Sam McGowan",
+      "gym": "City Kickboxing",
+      "am": [
+       8,
+       2,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "pro",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Cameron Price",
+      "gym": "Wimbledon Muay Thai",
+      "am": [
+       9,
+       2,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "am",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Aidan Conradie",
+      "gym": "MTI Wellington",
+      "am": [
+       13,
+       1,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "am",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Reuben Martin",
+      "gym": "Matariki Kickboxing",
+      "am": [
+       8,
+       1,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Elai Bishop",
+      "gym": "Evolution Muay Thai",
+      "am": [
+       8,
+       2,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       1
+      ],
+      "tier": "am",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Benny McKay",
+      "gym": "City Lee Gar",
+      "am": [
+       5,
+       1,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": "Amateur"
+     }
+    ],
+    "proChamp": "Sam Fitzgerald",
+    "amChamp": "Benny McKay",
+    "worldChamp": ""
+   },
+   {
+    "code": "MW",
+    "kg": "72.6",
+    "name": "Middleweight",
+    "ranks": [
+     {
+      "name": "Daniel Ruwanga",
+      "gym": "Strikeforce",
+      "am": [
+       11,
+       4,
+       0
+      ],
+      "pro": [
+       4,
+       3,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Jon Anderson",
+      "gym": "Oliver MMA",
+      "am": [
+       18,
+       14,
+       1
+      ],
+      "pro": [
+       1,
+       2,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Jack Young",
+      "gym": "Ngakanui",
+      "am": [
+       18,
+       6,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "pro",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Luca Carter",
+      "gym": "Warrior Training Academy",
+      "am": [
+       9,
+       2,
+       0
+      ],
+      "pro": [
+       1,
+       0,
+       0
+      ],
+      "tier": "pro",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Caz Melville",
+      "gym": "F16",
+      "am": [
+       10,
+       0,
+       1
+      ],
+      "pro": [
+       0,
+       1,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Thomas Lewis",
+      "gym": "MTI Wellington",
+      "am": [
+       9,
+       1,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": "Amateur"
+     },
+     {
+      "name": "Cole Banks",
+      "gym": "Evolution Muay Thai",
+      "am": [
+       7,
+       6,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "am",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Lukas Taia",
+      "gym": "Ghost Fist Lee Gar",
+      "am": [
+       8,
+       3,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Josh Whitehead",
+      "gym": "",
+      "am": [
+       12,
+       2,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Corrin Braddick",
+      "gym": "Art of Combat",
+      "am": [
+       18,
+       5,
+       0
+      ],
+      "pro": [
+       2,
+       1,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     }
+    ],
+    "proChamp": "Michael Lynch",
+    "amChamp": "Thomas Lewis",
+    "worldChamp": ""
+   },
+   {
+    "code": "SMW",
+    "kg": "76.2",
+    "name": "Super-middleweight",
+    "ranks": [
+     {
+      "name": "Titus Proctor",
+      "gym": "Tihipuke Muay Thai",
+      "am": [
+       17,
+       2,
+       0
+      ],
+      "pro": [
+       22,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "World champion",
+      "champ": "World"
+     },
+     {
+      "name": "Jake McCowatt",
+      "gym": "Ngakanui",
+      "am": [
+       27,
+       11,
+       0
+      ],
+      "pro": [
+       4,
+       2,
+       0
+      ],
+      "tier": "pro",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Ashton Harris",
+      "gym": "Matariki Kickboxing Pukekohe",
+      "am": [
+       15,
+       3,
+       2
+      ],
+      "pro": [
+       3,
+       2,
+       0
+      ],
+      "tier": "pro",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Suran Juanmiry",
+      "gym": "SMAC",
+      "am": [
+       23,
+       6,
+       2
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "DeeJ Edwards",
+      "gym": "Jackals",
+      "am": [
+       14,
+       6,
+       0
+      ],
+      "pro": [
+       7,
+       6,
+       3
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Dion Wilson",
+      "gym": "Freestyle MMA",
+      "am": [
+       14,
+       7,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "pro",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Cameron Adkin",
+      "gym": "City Lee Gar",
+      "am": [
+       10,
+       1,
+       0
+      ],
+      "pro": [
+       0,
+       1,
+       0
+      ],
+      "tier": "am-champ",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Kees Verheyen",
+      "gym": "Deep South",
+      "am": [
+       7,
+       6,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "am",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Zephyr Hawkins",
+      "gym": "Evolution Muay Thai",
+      "am": [
+       15,
+       6,
+       2
+      ],
+      "pro": [
+       0,
+       0,
+       1
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Zane Cleary",
+      "gym": "House Of Pain",
+      "am": [
+       6,
+       2,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Jared Sayers",
+      "gym": "Wimbledon Muay Thai",
+      "am": [
+       6,
+       7,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     }
+    ],
+    "proChamp": "",
+    "amChamp": "Damon Maireroa",
+    "worldChamp": "Titus Proctor"
+   },
+   {
+    "code": "LHW",
+    "kg": "79.3",
+    "name": "Light-heavyweight",
+    "ranks": [
+     {
+      "name": "Iggy Phillips",
+      "gym": "He Toa Mai Dojo",
+      "am": [
+       4,
+       1,
+       0
+      ],
+      "pro": [
+       2,
+       1,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Quade Samuels",
+      "gym": "Auckland MMA",
+      "am": [
+       9,
+       4,
+       0
+      ],
+      "pro": [
+       1,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Jack Green",
+      "gym": "Pathai Gym",
+      "am": [
+       6,
+       0,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "am",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     }
+    ],
+    "proChamp": "",
+    "amChamp": "Cameron Adkin",
+    "worldChamp": ""
+   },
+   {
+    "code": "CW",
+    "kg": "90.7",
+    "name": "Cruiserweight",
+    "ranks": [
+     {
+      "name": "Haimona Tamati Te-Paki",
+      "gym": "Core MMA/HOP",
+      "am": [
+       26,
+       6,
+       0
+      ],
+      "pro": [
+       4,
+       0,
+       0
+      ],
+      "tier": "pro",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "James Craughwell",
+      "gym": "",
+      "am": null,
+      "pro": null,
+      "tier": "pro",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Karaitiana Adams",
+      "gym": "Tihipuke Muaythai",
+      "am": [
+       10,
+       4,
+       0
+      ],
+      "pro": [
+       1,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "",
+      "flag": "",
+      "champ": "Amateur"
+     },
+     {
+      "name": "Hayden Crawford Williams",
+      "gym": "Freestyle MMA",
+      "am": [
+       10,
+       0,
+       0
+      ],
+      "pro": [
+       2,
+       0,
+       0
+      ],
+      "tier": "pro",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Leighton Fatamaka",
+      "gym": "Fox Den Combat Paeroa",
+      "am": [
+       10,
+       1,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "am",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Sitiveni Kutalele",
+      "gym": "Whakatane Fight Club",
+      "am": [
+       7,
+       3,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Dontay Lolomanaia",
+      "gym": "Wimbledon Muay Thai",
+      "am": [
+       7,
+       2,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Timani Ngungutau",
+      "gym": "Elite Thai Kickboxing",
+      "am": [
+       9,
+       1,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "am",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Tim Lawrence",
+      "gym": "Hybrid Training",
+      "am": [
+       6,
+       1,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "am",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Vake Tonga",
+      "gym": "Ghostfist Lee Gar",
+      "am": [
+       7,
+       4,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     }
+    ],
+    "proChamp": "",
+    "amChamp": "Karaitiana Adams",
+    "worldChamp": ""
+   },
+   {
+    "code": "HW",
+    "kg": "+90.7",
+    "name": "Heavyweight",
+    "ranks": [
+     {
+      "name": "Dchamed Armstrong",
+      "gym": "Team Alpha",
+      "am": [
+       8,
+       3,
+       0
+      ],
+      "pro": [
+       4,
+       0,
+       0
+      ],
+      "tier": "pro",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Earl Jay Pehi",
+      "gym": "AWA Kings",
+      "am": [
+       11,
+       4,
+       0
+      ],
+      "pro": [
+       4,
+       2,
+       0
+      ],
+      "tier": "pro",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Filisika Kaveinga",
+      "gym": "Hitman Lee Gar",
+      "am": [
+       13,
+       5,
+       0
+      ],
+      "pro": [
+       0,
+       1,
+       0
+      ],
+      "tier": "pro",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Lapa Halangahu",
+      "gym": "South Island Lee Gar",
+      "am": [
+       15,
+       6,
+       1
+      ],
+      "pro": [
+       0,
+       1,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Daniel Paul",
+      "gym": "Jackals",
+      "am": [
+       11,
+       5,
+       0
+      ],
+      "pro": [
+       0,
+       2,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Gabriel Tuteru",
+      "gym": "SALT",
+      "am": [
+       6,
+       1,
+       0
+      ],
+      "pro": [
+       1,
+       1,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 2 Muay Thai wins",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Julez Tauu",
+      "gym": "Ghostfist Lee Gar",
+      "am": [
+       10,
+       4,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "pro",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Ronnie Lee",
+      "gym": "House of Pain",
+      "am": [
+       8,
+       3,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Kagan Gilcrest",
+      "gym": "Maui Muay Thai",
+      "am": [
+       5,
+       2,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "",
+      "req": "Needs 1 Muay Thai win",
+      "flag": "",
+      "champ": ""
+     },
+     {
+      "name": "Terry Rima",
+      "gym": "Ghostfist Lee Gar",
+      "am": [
+       7,
+       2,
+       0
+      ],
+      "pro": [
+       0,
+       0,
+       0
+      ],
+      "tier": "am",
+      "req": "",
+      "flag": "",
+      "champ": ""
+     }
+    ],
+    "proChamp": "",
+    "amChamp": "",
+    "worldChamp": ""
+   }
+  ]
+ },
+ "results": [
+  {
+   "date": "2026-08-21",
+   "division": "Super-middleweight (76.2kg)",
+   "scope": "New Zealand",
+   "level": "Amateur",
+   "winner": "Damon Maireroa",
+   "opponent": "Kees Verheyen",
+   "event": "Art of War"
+  },
+  {
+   "date": "2026-08-21",
+   "division": "Super-welterweight (69.8kg)",
+   "scope": "New Zealand",
+   "level": "Amateur",
+   "winner": "Benny McKay",
+   "opponent": "Jaycob Kerapa",
+   "event": "Art of War"
+  },
+  {
+   "date": "2026-06-21",
+   "division": "Lightweight (61.25kg)",
+   "scope": "New Zealand",
+   "level": "Amateur",
+   "winner": "Waelin Kerekere",
+   "opponent": "Tomoki Huskinson",
+   "event": "Mae Mai"
+  },
+  {
+   "date": "2026-06-21",
+   "division": "Super-lightweight (63.5kg)",
+   "scope": "New Zealand",
+   "level": "Amateur",
+   "winner": "Bayleigh McNamara",
+   "opponent": "Shian Gao",
+   "event": "Mae Mai"
+  },
+  {
+   "date": "2026-04-17",
+   "division": "Middleweight (72.6kg)",
+   "scope": "New Zealand",
+   "level": "Amateur",
+   "winner": "Thomas Lewis",
+   "opponent": "Lukas Taia",
+   "event": "Art Of War 28"
+  },
+  {
+   "date": "2026-04-17",
+   "division": "Welterweight (66.6kg)",
+   "scope": "New Zealand",
+   "level": "Amateur",
+   "winner": "Kyrie Choudbury",
+   "opponent": "Andrew Fraenkel",
+   "event": "Art Of War 28"
+  },
+  {
+   "date": "2026-02-26",
+   "division": "Welterweight (66.6kg)",
+   "scope": "Oceania",
+   "level": "Pro",
+   "winner": "Moey Dahlan",
+   "opponent": "Michael Isaac",
+   "event": "1774 Promotions"
+  },
+  {
+   "date": "2026-02-21",
+   "division": "Super-welterweight (69.8kg)",
+   "scope": "New Zealand",
+   "level": "Pro",
+   "winner": "Sam Fitzgerald",
+   "opponent": "Joe Parsons",
+   "event": "Mae Mai 2"
+  },
+  {
+   "date": "2025-12-12",
+   "division": "Middleweight (72.6kg)",
+   "scope": "New Zealand",
+   "level": "Pro",
+   "winner": "Michael Lynch",
+   "opponent": "Daniel Ruwanga",
+   "event": "Art of War 27"
+  },
+  {
+   "date": "2025-12-12",
+   "division": "Cruiserweight (90.7kg)",
+   "scope": "New Zealand",
+   "level": "Amateur",
+   "winner": "Karaitiana Adams",
+   "opponent": "Dontay Lolomanaia",
+   "event": "Art Of War 27"
+  },
+  {
+   "date": "2025-12-05",
+   "division": "Light-heavyweight (79.3kg)",
+   "scope": "New Zealand",
+   "level": "Pro",
+   "winner": "Tommy Gunn",
+   "opponent": "Iggy Phillips",
+   "event": "Lights Out"
+  },
+  {
+   "date": "2025-12-05",
+   "division": "Welterweight (66.6kg)",
+   "scope": "World",
+   "level": "Pro",
+   "winner": "Rose Amorim (Brazil)",
+   "opponent": "Emma Diprose (NZ) ()",
+   "event": "Lights Out"
+  },
+  {
+   "date": "2025-12-05",
+   "division": "Super-middleweight (76.2kg)",
+   "scope": "World",
+   "level": "Pro",
+   "winner": "Titus Proctor",
+   "opponent": "Daniel Bonner (UK)",
+   "event": "Lights Out"
+  },
+  {
+   "date": "2025-08-09",
+   "division": "Bantamweight (53.5kg)",
+   "scope": "New Zealand",
+   "level": "Pro",
+   "winner": "Bubba Tairua Bracken",
+   "opponent": "Sara Siraj",
+   "event": "TMT Showtime"
+  },
+  {
+   "date": "2025-08-09",
+   "division": "Cruiserweight (90.7kg)",
+   "scope": "New Zealand",
+   "level": "Amateur",
+   "winner": "Karaitiana Adams",
+   "opponent": "Taratu Mankelow",
+   "event": "TMT Showtime"
+  },
+  {
+   "date": "2025-08-08",
+   "division": "Super-lightweight (63.5kg)",
+   "scope": "New Zealand",
+   "level": "Amateur",
+   "winner": "Ben Karam",
+   "opponent": "Andre Fruh",
+   "event": "Art Of War 26"
+  },
+  {
+   "date": "2025-08-08",
+   "division": "Super-welterweight (69.8kg)",
+   "scope": "New Zealand",
+   "level": "Amateur",
+   "winner": "Rex Cooper",
+   "opponent": "Reuben Martin",
+   "event": "Art Of War 26"
+  },
+  {
+   "date": "2025-08-08",
+   "division": "Light-heavyweight (79.3kg)",
+   "scope": "New Zealand",
+   "level": "Amateur",
+   "winner": "Cameron Adkin",
+   "opponent": "Quade Samuels",
+   "event": "Art Of War 26"
+  },
+  {
+   "date": "2025-06-27",
+   "division": "Welterweight (66.6kg)",
+   "scope": "New Zealand",
+   "level": "Amateur",
+   "winner": "Kyrie Choudbury",
+   "opponent": "Shaun Spencer",
+   "event": "Mae Mai 1"
+  },
+  {
+   "date": "2025-06-27",
+   "division": "Middleweight (72.6kg)",
+   "scope": "New Zealand",
+   "level": "Pro",
+   "winner": "Michael Lynch",
+   "opponent": "Jon Anderson",
+   "event": "Mae Mai 1"
+  },
+  {
+   "date": "2025-05-17",
+   "division": "Light-heavyweight (79.3kg)",
+   "scope": "New Zealand",
+   "level": "Pro",
+   "winner": "Iggy Phillips",
+   "opponent": "Chris Scanlan",
+   "event": "CP73"
+  },
+  {
+   "date": "2025-03-29",
+   "division": "Super-lightweight (63.5kg)",
+   "scope": "New Zealand",
+   "level": "Amateur",
+   "winner": "Julian Jensen",
+   "opponent": "AJ Foster",
+   "event": "Lights Out"
+  },
+  {
+   "date": "2025-03-29",
+   "division": "Super-middleweight (76.2kg)",
+   "scope": "New Zealand",
+   "level": "Pro",
+   "winner": "Titus Proctor",
+   "opponent": "Tony Jaggard",
+   "event": "Lights Out"
+  },
+  {
+   "date": "2025-03-29",
+   "division": "Heavyweight (+90.7kg)",
+   "scope": "New Zealand",
+   "level": "Pro",
+   "winner": "Dchamed Armstrong",
+   "opponent": "James Craughwell",
+   "event": "Lights Out"
+  },
+  {
+   "date": "2025-02-22",
+   "division": "Lightweight (61.25kg)",
+   "scope": "World",
+   "level": "Pro",
+   "winner": "Niahm Kinehan",
+   "opponent": "Kaitlyn Tucker",
+   "event": "MuayThai Super Series"
+  },
+  {
+   "date": "2024-11-22",
+   "division": "Super-welterweight (69.8kg)",
+   "scope": "New Zealand",
+   "level": "Amateur",
+   "winner": "Rex Cooper",
+   "opponent": "Daniel Garcia",
+   "event": "Young Blood 19"
+  },
+  {
+   "date": "2024-11-22",
+   "division": "Super-welterweight (69.8kg)",
+   "scope": "New Zealand",
+   "level": "Pro",
+   "winner": "Joeseph Parsons",
+   "opponent": "Michael Lynch",
+   "event": "Young Blood 19"
+  },
+  {
+   "date": "2024-11-08",
+   "division": "Super-lightweight (63.5kg)",
+   "scope": "New Zealand",
+   "level": "Pro",
+   "winner": "Ben Spears",
+   "opponent": "Dominic Reed",
+   "event": "Art of War 24"
+  },
+  {
+   "date": "2024-11-08",
+   "division": "Light-heavyweight (79.3kg)",
+   "scope": "New Zealand",
+   "level": "Pro",
+   "winner": "Slava Alexeichik",
+   "opponent": "Hayden Todd",
+   "event": "Art of War 24"
+  },
+  {
+   "date": "2024-07-12",
+   "division": "Super-welterweight (69.8kg)",
+   "scope": "New Zealand",
+   "level": "Amateur",
+   "winner": "Rex Cooper",
+   "opponent": "Sam McGowan",
+   "event": "Art Of War 23"
+  },
+  {
+   "date": "2024-07-12",
+   "division": "Super-lightweight (63.5kg)",
+   "scope": "New Zealand",
+   "level": "Pro",
+   "winner": "Ben Spears",
+   "opponent": "Reid Miller",
+   "event": "Art of War 23"
+  },
+  {
+   "date": "2024-06-29",
+   "division": "Lightweight (61.25kg)",
+   "scope": "New Zealand",
+   "level": "Amateur",
+   "winner": "AJ Foster",
+   "opponent": "Zion Perry",
+   "event": "Muay Thai Royale"
+  },
+  {
+   "date": "2024-06-29",
+   "division": "Super-middleweight (76.2kg)",
+   "scope": "New Zealand",
+   "level": "Pro",
+   "winner": "Titus Proctor",
+   "opponent": "Diego Beneduzzi",
+   "event": "MuayThai Royale"
+  },
+  {
+   "date": "2024-06-29",
+   "division": "Lightweight (61.25kg)",
+   "scope": "International",
+   "level": "Pro",
+   "winner": "Kaitlyn Tucker",
+   "opponent": "Katie-Rose Mitchell (AU)",
+   "event": "MuayThai Royale"
+  },
+  {
+   "date": "2024-06-22",
+   "division": "Heavyweight (+90.7kg)",
+   "scope": "New Zealand",
+   "level": "Pro",
+   "winner": "Geovana Peres",
+   "opponent": "Faith McMah",
+   "event": "Lights Out"
+  },
+  {
+   "date": "2024-06-22",
+   "division": "Welterweight (66.6kg)",
+   "scope": "New Zealand",
+   "level": "Pro",
+   "winner": "Kayne Conlan",
+   "opponent": "Rob Horrocks",
+   "event": "Lights Out"
+  },
+  {
+   "date": "2024-04-27",
+   "division": "Super-lightweight (63.5kg)",
+   "scope": "World",
+   "level": "Pro",
+   "winner": "Zoe Putorak",
+   "opponent": "Kaitlyn Tucker",
+   "event": "Muay Thai League 10"
+  }
+ ],
+ "news": [
+  {
+   "date": "2026-08-23",
+   "title": "Damon Maireroa wins the amateur super-middleweight title",
+   "summary": "He beat Kees Verheyen in a back-and-forth fight at Art of War in Auckland.",
+   "url": "https://www.wbcmuaythai.com/archives/9346",
+   "source": "WBC MuayThai"
+  },
+  {
+   "date": "2026-08-21",
+   "title": "Benny McKay crowned amateur super-welterweight champion",
+   "summary": "McKay beat Jaycob Kerapa at Art of War in Auckland.",
+   "url": "https://www.wbcmuaythai.com/archives/9341",
+   "source": "WBC MuayThai"
+  },
+  {
+   "date": "2026-04-18",
+   "title": "Two amateur titles decided at The Y in Auckland",
+   "summary": "Art of War hosted a night of amateur title fights, headlined by a welterweight championship.",
+   "url": "https://www.wbcmuaythai.com/news",
+   "source": "WBC MuayThai"
+  },
+  {
+   "date": "2025-12-08",
+   "title": "Titus Proctor wins the WBC Muay Thai world super-middleweight title",
+   "summary": "The 21-year-old from Hamilton became the first New Zealand man to hold the WBC Muay Thai world belt.",
+   "url": "https://www.nzherald.co.nz/waikato-news/news/titus-proctor-wins-wbc-muay-thai-world-title-in-mt-maunganui-showdown/2VMUZNEFXJD5FF2IUJAYJCI37M/",
+   "source": "NZ Herald",
+   "approx": true
+  }
+ ],
+ "bouts": []
+}

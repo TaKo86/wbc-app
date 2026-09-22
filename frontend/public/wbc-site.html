@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WBC Muay Thai New Zealand</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #EEF0EB; --surface: #FFFFFF; --ink: #15211A; --muted: #56645B; --line: #D5DAD1;
+  --hero: #0F4D33; --hero-ink: #F2F5EF; --hero-muted: #B5CDBF;
+  --gold: #B8912F; --gold-ink: #1A1405; --red: #B3261E; --focus: #0F4D33;
+  --display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --body: "Barlow", "Helvetica Neue", Arial, sans-serif;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1511; --surface: #16201A; --ink: #E9EEE7; --muted: #9AA89F; --line: #263229;
+    --hero: #0B3A26; --gold: #D2AC4A; --red: #E0574E; --focus: #D2AC4A;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E1511; --surface: #16201A; --ink: #E9EEE7; --muted: #9AA89F; --line: #263229;
+  --hero: #0B3A26; --gold: #D2AC4A; --red: #E0574E; --focus: #D2AC4A;
+}
+html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 64px); scroll-behavior: smooth; }
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.55; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+.site-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--hero); color: var(--hero-ink); border-bottom: 3px solid var(--gold); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; }
+.brand { font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: .02em; text-decoration: none; white-space: nowrap; }
+.nav { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+.nav a { color: var(--hero-ink); text-decoration: none; padding: 8px 12px; border-radius: 4px; font-weight: 500; font-size: 15px; white-space: nowrap; }
+.nav a:hover { background: rgba(255,255,255,.12); }
+
+.hero { background: var(--hero); color: var(--hero-ink); position: relative; overflow: hidden; padding: 56px 0 72px; }
+.hero::before, .hero::after { content: ""; position: absolute; left: 0; right: 0; height: 6px; background: var(--red); opacity: .9; }
+.hero::before { bottom: 30px; }
+.hero::after { bottom: 14px; background: var(--hero-ink); opacity: .85; }
+.hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
+.hero h1 { font-family: var(--display); font-weight: 700; font-size: clamp(52px, 8vw, 104px); line-height: .92; margin: 0 0 20px; }
+.hero p.lede { font-size: 19px; color: var(--hero-muted); max-width: 30em; margin: 0 0 28px; }
+.btn { display: inline-block; background: var(--gold); color: var(--gold-ink); font-weight: 600; text-decoration: none; padding: 12px 22px; border-radius: 4px; font-size: 16px; }
+.btn:hover { filter: brightness(1.08); }
+.btn.ghost { background: transparent; color: var(--hero-ink); border: 2px solid rgba(255,255,255,.4); margin-left: 8px; padding: 10px 20px; }
+
+.latest { background: var(--surface); color: var(--ink); border-radius: 6px; padding: 24px; border-top: 6px solid var(--gold); }
+.latest h2 { margin: 0 0 16px; font-family: var(--display); font-size: 28px; font-weight: 700; line-height: 1.1; }
+.latest ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.latest li { padding: 14px 0; border-top: 1px solid var(--line); }
+.latest li:first-child { border-top: 0; padding-top: 0; }
+.latest .res { font-size: 19px; font-weight: 600; line-height: 1.25; }
+.latest .res span { color: var(--muted); font-weight: 400; }
+.latest .meta { color: var(--muted); font-size: 14px; margin-top: 2px; }
+
+section { padding: 72px 0 8px; }
+.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; }
+h2.title { font-family: var(--display); font-weight: 700; font-size: clamp(36px, 5vw, 54px); line-height: 1; margin: 0; }
+h3.group { font-family: var(--display); font-size: 28px; font-weight: 700; margin: 36px 0 16px; line-height: 1.1; }
+h3.group:first-of-type { margin-top: 0; }
+.section-head p { margin: 0; color: var(--muted); max-width: 32em; }
+
+.portrait { position: relative; overflow: hidden; border-radius: 4px; background: #23332A; }
+.portrait svg, .portrait img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+.champs { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 24px; }
+.champ { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; display: flex; flex-direction: column; }
+.champ .portrait { aspect-ratio: 4/5; border-radius: 0; }
+.champ .belt { background: var(--gold); color: var(--gold-ink); font-family: var(--display); font-weight: 700; font-size: 19px; line-height: 1.15; padding: 7px 14px; border-top: 3px solid var(--hero); border-bottom: 3px solid var(--hero); }
+.champ .info { padding: 14px 14px 16px; }
+.champ h3 { margin: 0 0 2px; font-size: 20px; line-height: 1.2; }
+.champ .gym { color: var(--muted); font-size: 15px; margin: 0; }
+.champ dl { margin: 10px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; font-size: 14px; color: var(--muted); }
+.champ dt { font-weight: 500; }
+.champ dd { margin: 0; color: var(--ink); }
+
+.controls { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-bottom: 16px; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; background: var(--surface); }
+.seg button { font: inherit; font-weight: 500; font-size: 15px; background: transparent; color: var(--ink); border: 0; padding: 9px 20px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--hero); color: var(--hero-ink); }
+.tabs { display: flex; gap: 6px; overflow-x: auto; margin-bottom: 16px; padding-bottom: 4px; scrollbar-width: thin; }
+.tabs button { font: inherit; font-weight: 500; font-size: 15px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); padding: 9px 14px; border-radius: 4px; cursor: pointer; white-space: nowrap; }
+.tabs button[aria-selected="true"] { background: var(--hero); color: var(--hero-ink); border-color: var(--hero); }
+.holders { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 0 0 16px; font-size: 16px; }
+.holders b { font-weight: 600; }
+.holders .vacant { color: var(--muted); }
+.table-scroll { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; min-width: 600px; }
+th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+th { font-size: 14px; font-weight: 600; color: var(--muted); background: var(--bg); }
+tbody tr:last-child td { border-bottom: 0; }
+td.rank { width: 64px; font-family: var(--display); font-weight: 700; font-size: 24px; }
+tr.is-champ td { background: color-mix(in srgb, var(--gold) 16%, var(--surface)); }
+tr.is-champ td.rank { color: var(--gold); }
+.who { display: flex; align-items: center; gap: 12px; font-weight: 600; }
+.who .portrait { width: 40px; height: 40px; border-radius: 50%; flex: none; }
+.who small { display: block; font-weight: 400; color: var(--muted); font-size: 13px; line-height: 1.3; }
+.tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 1px 8px; border-radius: 10px; margin-left: 8px; vertical-align: middle; background: var(--gold); color: var(--gold-ink); white-space: nowrap; }
+.tag.soft { background: transparent; border: 1px solid var(--line); color: var(--muted); font-weight: 500; }
+.rec { line-height: 1.35; white-space: nowrap; }
+.rec small { color: var(--muted); }
+h3.sub { font-family: var(--display); font-size: 24px; margin: 32px 0 6px; }
+.fine { color: var(--muted); font-size: 14px; margin: 14px 0 0; max-width: 60em; }
+
+.results-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; }
+.results-wrap table { min-width: 700px; }
+.more { margin-top: 16px; font: inherit; font-weight: 600; background: var(--surface); color: var(--ink); border: 1px solid var(--line); padding: 10px 18px; border-radius: 4px; cursor: pointer; }
+
+.empty { background: var(--surface); border: 1px dashed var(--line); border-radius: 4px; padding: 28px 24px; }
+.empty h3 { margin: 0 0 4px; font-size: 20px; }
+.empty p { margin: 0; color: var(--muted); }
+.bouts { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.bout { display: grid; grid-template-columns: 84px 1fr auto; gap: 20px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-left: 6px solid var(--hero); border-radius: 4px; padding: 16px 20px; }
+.bout.title-fight { border-left-color: var(--gold); }
+.date { text-align: center; font-family: var(--display); font-weight: 700; line-height: 1; }
+.date .d { font-size: 44px; display: block; }
+.date .m { font-size: 18px; color: var(--muted); }
+.bout h3 { margin: 0 0 2px; font-size: 20px; line-height: 1.25; }
+.bout p { margin: 0; color: var(--muted); font-size: 15px; }
+.bout .where { text-align: right; font-weight: 500; }
+
+.news { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+.story { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 20px; }
+.story a { text-decoration: none; display: flex; flex-direction: column; gap: 8px; height: 100%; }
+.story time, .story .src { font-size: 14px; color: var(--muted); }
+.story h3 { margin: 0; font-size: 20px; line-height: 1.25; }
+.story a:hover h3 { text-decoration: underline; }
+.story p { margin: 0; color: var(--muted); font-size: 15px; }
+
+footer { margin-top: 80px; background: var(--hero); color: var(--hero-muted); padding: 32px 0; font-size: 15px; }
+footer strong { color: var(--hero-ink); font-family: var(--display); font-size: 20px; }
+
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  .hero { padding: 40px 0 64px; }
+  .bout { grid-template-columns: 64px 1fr; }
+  .bout .where { grid-column: 2; text-align: left; }
+  .date .d { font-size: 36px; }
+  .btn.ghost { margin: 10px 0 0; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">WBC Muay Thai NZ</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#champions">Champions</a>
+      <a href="#rankings">Rankings</a>
+      <a href="#results">Title fights</a>
+      <a href="#bouts">Upcoming bouts</a>
+      <a href="#news">News</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>WBC Muay Thai New Zealand</h1>
+        <p class="lede">Current champions, official rankings, title fight results and news from WBC Muay Thai in New Zealand.</p>
+        <a class="btn" href="#champions">View champions</a>
+        <a class="btn ghost" href="#rankings">View rankings</a>
+      </div>
+      <div class="latest" aria-label="Latest title fights">
+        <h2>Latest title fights</h2>
+        <ol id="latest"></ol>
+      </div>
+    </div>
+  </div>
+
+  <section id="champions">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="title">Current champions</h2>
+        <p>Holders of WBC Muay Thai New Zealand titles, and New Zealand's WBC world champion.</p>
+      </div>
+      <div id="champGroups"></div>
+    </div>
+  </section>
+
+  <section id="rankings">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="title">Rankings</h2>
+        <p>Pick a division to see who holds the title and who is in line for it.</p>
+      </div>
+      <div class="controls">
+        <div class="seg" id="segL" role="group" aria-label="Level">
+          <button type="button" data-l="Pro" aria-pressed="true">Professional</button>
+          <button type="button" data-l="Amateur" aria-pressed="false">Amateur</button>
+        </div>
+        <div class="seg" id="segG" role="group" aria-label="Division">
+          <button type="button" data-g="M" aria-pressed="true">Men</button>
+          <button type="button" data-g="F" aria-pressed="false">Women</button>
+        </div>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Weight class" id="tabs"></div>
+      <p class="holders" id="holders"></p>
+      <div class="table-scroll"><table id="rankTable"></table></div>
+      <div id="pending"></div>
+      <p class="fine">Records show wins-losses-draws, with amateur and professional bouts listed separately, as held in the WBC NZ records file. Fighters are placed on the professional or amateur list according to the title they are eligible for.</p>
+    </div>
+  </section>
+
+  <section id="results">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="title">Title fight results</h2>
+        <p>Every WBC Muay Thai title fight involving New Zealand fighters, newest first.</p>
+      </div>
+      <div class="results-wrap"><table id="resTable"></table></div>
+      <button class="more" id="moreBtn" type="button"></button>
+    </div>
+  </section>
+
+  <section id="bouts">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="title">Upcoming bouts</h2>
+        <p>Confirmed title fights and main card matchups.</p>
+      </div>
+      <ul class="bouts" id="boutList"></ul>
+    </div>
+  </section>
+
+  <section id="news">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="title">News</h2>
+        <p>Recent announcements and results. Stories open on the publisher's site.</p>
+      </div>
+      <div class="news" id="newsList"></div>
+      <p class="fine"><a href="https://www.wbcmuaythai.com/news" target="_blank" rel="noopener">More WBC Muay Thai news on wbcmuaythai.com</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>WBC Muay Thai New Zealand</strong>
+    <p style="margin:6px 0 0">Rankings and records come from the WBC NZ fight records file. Check with WBC Muay Thai New Zealand for official confirmation.</p>
+  </div>
+</footer>
+
+<script>
+/* DATA: generated from the WBC NZ fight records file. Edit values here to update the site.
+   photo: add a "photo" field (a data: URI) to a champion to replace the silhouette.
+   bouts: add { date: "2026-11-14T18:00:00+13:00", title: true, division: "...", rounds: 5, city: "...", a: "...", b: "..." } */
+const DATA = {"champions":[{"name":"Bubba Tairua-Bracken","gender":"F","level":"Pro","kg":"53.5","division":"Bantamweight (53.5kg)","since":"2025-08-09","opponent":"Sara Siraj","promotion":"TMT Showtime","defences":0,"gym":"Tihipuke Muay Thai","am":[7,3,0],"pro":[3,0,0]},{"name":"Geovana Peres","gender":"F","level":"Pro","kg":"+90.7","division":"Heavyweight (+90.7kg)","since":"2024-06-22","opponent":"Faith McMah","promotion":"Lights Out","defences":0,"gym":"City Lee Gar","am":[4,0,0],"pro":[1,0,0]},{"name":"Sam Fitzgerald","gender":"M","level":"Pro","kg":"69.8","division":"Super-welterweight (69.8kg)","since":"2026-02-21","opponent":"Joe Parsons","promotion":"Mae Mai 2","defences":0,"gym":"Hitman Lee Gar","am":[13,2,0],"pro":[1,0,0]},{"name":"Michael Lynch","gender":"M","level":"Pro","kg":"72.6","division":"Middleweight (72.6kg)","since":"2025-06-27","opponent":"Jon Anderson","promotion":"Mae Mai 1","defences":1,"gym":"Hitman Lee Gar","am":[9,7,0],"pro":[2,1,0]},{"name":"Titus Proctor","gender":"M","level":"World","kg":"76.2","division":"World Super-middleweight (76.2kg)","since":"2025-12-05","opponent":"Daniel Bonner (UK)","promotion":"Lights Out","defences":0,"gym":"Tihipuke Muay Thai","am":[17,2,0],"pro":[22,0,0]},{"name":"Waelin Kerekere","gender":"M","level":"Amateur","kg":"61.25","division":"Lightweight (61.25kg)","since":"2026-06-21","opponent":"Tomoki Huskinson","promotion":"Mae Mai","defences":0,"gym":"SMAC","am":[9,6,0],"pro":[0,0,0]},{"name":"Bayleigh McNamara","gender":"M","level":"Amateur","kg":"63.5","division":"Super-lightweight (63.5kg)","since":"2026-06-21","opponent":"Shian Gao","promotion":"Mae Mai","defences":0,"gym":"Remuera Lee Gar","am":[8,2,0],"pro":[0,0,0]},{"name":"Kyrie Choudhury","gender":"M","level":"Amateur","kg":"66.6","division":"Welterweight (66.6kg)","since":"2025-06-27","opponent":"Shaun Spencer","promotion":"Mae Mai 1","defences":1,"gym":"Team Hardcore","am":[8,2,0],"pro":[0,0,0]},{"name":"Benny McKay","gender":"M","level":"Amateur","kg":"69.8","division":"Super-welterweight (69.8kg)","since":"2026-08-21","opponent":"Jaycob Kerapa","promotion":"Art of War","defences":0,"gym":"City Lee Gar","am":[5,1,0],"pro":[0,0,0]},{"name":"Thomas Lewis","gender":"M","level":"Amateur","kg":"72.6","division":"Middleweight (72.6kg)","since":"2026-04-17","opponent":"Lukas Taia","promotion":"Art Of War 28","defences":0,"gym":"MTI Wellington","am":[9,1,0],"pro":[0,0,0]},{"name":"Damon Maireroa","gender":"M","level":"Amateur","kg":"76.2","division":"Super-middleweight (76.2kg)","since":"2026-08-21","opponent":"Kees Verheyen","promotion":"Art of War","defences":0},{"name":"Cameron Adkin","gender":"M","level":"Amateur","kg":"79.3","division":"Light-heavyweight (79.3kg)","since":"2025-08-08","opponent":"Quade Samuels","promotion":"Art Of War 26","defences":0,"gym":"City Lee Gar","am":[10,1,0],"pro":[0,1,0]},{"name":"Karaitiana Adams","gender":"M","level":"Amateur","kg":"90.7","division":"Cruiserweight (90.7kg)","since":"2025-08-09","opponent":"Taratu Mankelow","promotion":"TMT Showtime","defences":1,"gym":"Tihipuke Muaythai","am":[10,4,0],"pro":[1,0,0]}],"divisions":{"F":[{"code":"BW","kg":"53.5","name":"Bantamweight","ranks":[{"name":"Karlee Winiata","gym":"THe Fight Shop","am":[5,2,0],"pro":[2,2,0],"tier":"pro","req":"","flag":"","champ":""},{"name":"Sara Siraj","gym":"Beyond Muay Thai","am":[6,6,0],"pro":[0,1,0],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""},{"name":"Gabby Kane","gym":"Auckland MMA","am":[3,3,0],"pro":[9,7,0],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""},{"name":"Meg Barlow","gym":"Alpha Muay Thai","am":[6,3,0],"pro":[0,2,0],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""}],"proChamp":"Bubba Tairua-Bracken","amChamp":"","worldChamp":""},{"code":"SBW","kg":"55.3","name":"Super-bantamweight","ranks":[{"name":"Lorraine Robson","gym":"Ghostfist Lee Gar","am":[6,5,1],"pro":[0,0,0],"tier":"","req":"Needs Thai experience","flag":"","champ":""},{"name":"Yasmine Knight","gym":"City Kickboxing","am":[3,0,0],"pro":[0,0,0],"tier":"","req":"Needs Thai experience","flag":"","champ":""},{"name":"Jordyn Tuhiwai","gym":"VR MMA","am":[3,0,0],"pro":[0,0,0],"tier":"","req":"Needs Thai experience","flag":"","champ":""}],"proChamp":"","amChamp":"","worldChamp":""},{"code":"FW","kg":"57.1","name":"Featherweight","ranks":[{"name":"Jenna Kueabram","gym":"Himan Lee Gar","am":[0,0,0],"pro":[23,11,1],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""},{"name":"Wendy Talbot","gym":"City Kickboxing","am":[12,6,0],"pro":[13,4,1],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""},{"name":"Rayven Simpson","gym":"ROA","am":[8,4,0],"pro":[1,1,0],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""}],"proChamp":"","amChamp":"","worldChamp":""},{"code":"SFW","kg":"58.9","name":"Super-featherweight","ranks":[{"name":"Ishtar Mackey-Huriwai","gym":"Rangataua O Aotearoa","am":[16,9,0],"pro":[3,0,0],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""},{"name":"Rishon Harris","gym":"Fight Science Queenstown","am":[9,5,0],"pro":[1,0,0],"tier":"","req":"","flag":"","champ":""},{"name":"Amara Jones","gym":"Freestyle FC","am":[7,4,0],"pro":[0,1,0],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""},{"name":"Elina Andrew","gym":"All Day Fitness","am":[6,3,0],"pro":[0,0,0],"tier":"","req":"","flag":"","champ":""},{"name":"Sherman Tunggalag Wang","gym":"Hitman Lee Gar","am":[4,4,2],"pro":[0,0,0],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""},{"name":"Shannel Flavell","gym":"Fight Dept","am":[4,3,0],"pro":[0,0,0],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""},{"name":"Jessica Beswick","gym":"Urban Sport","am":[4,0,0],"pro":[0,0,0],"tier":"","req":"","flag":"","champ":""}],"proChamp":"","amChamp":"","worldChamp":""},{"code":"LW","kg":"61.25","name":"Lightweight","ranks":[{"name":"Deanne Philpott","gym":"ETK","am":[11,4,0],"pro":[4,1,0],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""}],"proChamp":"","amChamp":"","worldChamp":""},{"code":"SLW","kg":"63.5","name":"Super-lightweight","ranks":[{"name":"Melanie Berg","gym":"MTI Wellington","am":[12,1,0],"pro":[0,0,0],"tier":"am","req":"","flag":"","champ":""},{"name":"Waimatao Hiro","gym":"Team Downs","am":[12,5,0],"pro":[0,0,0],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""},{"name":"McKenzie Oneil","gym":"Shuriken","am":[1,0,0],"pro":[0,0,0],"tier":"","req":"","flag":"","champ":""},{"name":"Jules Vassalos","gym":"Hurto Gym","am":[9,0,0],"pro":[0,0,0],"tier":"am","req":"","flag":"","champ":""}],"proChamp":"","amChamp":"","worldChamp":""},{"code":"WW","kg":"66.6","name":"Welterweight","ranks":[{"name":"Emma Diprose","gym":"Evolution Muay Thai","am":[16,7,0],"pro":[2,0,0],"tier":"pro","req":"","flag":"","champ":""},{"name":"Bekey Burgess","gym":"Spartan Kickboxing","am":[7,1,0],"pro":[0,0,0],"tier":"","req":"","flag":"","champ":""},{"name":"Katie Lorraine","gym":"City Lee Gar","am":[4,0,0],"pro":[0,0,0],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""},{"name":"Jaylee Savage","gym":"Paramount MuayThai","am":[1,1,0],"pro":[0,0,0],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""}],"proChamp":"","amChamp":"","worldChamp":""},{"code":"CW","kg":"90.7","name":"Cruiserweight","ranks":[{"name":"Tiana Barlow","gym":"House of Pain","am":[3,2,0],"pro":[0,0,0],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""},{"name":"Tash Tuuta","gym":"South Island Lee Gar","am":[4,5,0],"pro":[0,0,0],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""},{"name":"Saphrine Carmichael","gym":"Scorpion Claw Fight Club","am":[1,0,0],"pro":[0,0,0],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""},{"name":"Alana Tuteru","gym":"SALT","am":[1,0,0],"pro":[0,0,0],"tier":"","req":"","flag":"","champ":""},{"name":"Alejandra Penaranda","gym":"Tihipuke Muaythai","am":[0,1,0],"pro":[0,0,0],"tier":"","req":"","flag":"","champ":""}],"proChamp":"","amChamp":"","worldChamp":""},{"code":"HW","kg":"+90.7","name":"Heavyweight","ranks":[{"name":"Saph Carmichael","gym":"Scorpion Claw Fight Club","am":[1,0,0],"pro":[0,0,0],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""},{"name":"Jessica Renshaw","gym":"Phoenix Rising","am":[0,1,0],"pro":[0,0,0],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""}],"proChamp":"Geovana Peres","amChamp":"","worldChamp":""}],"M":[{"code":"SFW","kg":"58.9","name":"Super-featherweight","ranks":[{"name":"Ongjaneh Rott","gym":"ETK","am":[6,2,0],"pro":[4,2,0],"tier":"pro","req":"","flag":"","champ":""},{"name":"Anwar Alhmidi","gym":"Paramount Muay Thai","am":[9,4,0],"pro":[0,0,0],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""},{"name":"Ryder Onfrey","gym":"Forged Rotorua","am":[4,7,0],"pro":[0,0,0],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""},{"name":"Caleb Neville","gym":"","am":null,"pro":null,"tier":"","req":"","flag":"","champ":""},{"name":"Shayde Pomare","gym":"Unity Fitness","am":[5,2,0],"pro":[0,0,0],"tier":"","req":"","flag":"","champ":""},{"name":"Oscar Raethel","gym":"Warrior Training Academy","am":[4,3,0],"pro":[0,0,0],"tier":"","req":"","flag":"","champ":""},{"name":"Jiteesh Deo","gym":"Ronin Gym Wellington","am":[2,1,0],"pro":[0,0,0],"tier":"","req":"","flag":"","champ":""}],"proChamp":"","amChamp":"","worldChamp":""},{"code":"LW","kg":"61.25","name":"Lightweight","ranks":[{"name":"Zion Perry","gym":"Warrior Training Academy","am":[13,5,0],"pro":[3,1,1],"tier":"pro","req":"","flag":"","champ":""},{"name":"Waelin Kerekere","gym":"SMAC","am":[9,6,0],"pro":[0,0,0],"tier":"","req":"","flag":"","champ":"Amateur"},{"name":"Shian Gao","gym":"Kings Academy","am":[5,2,1],"pro":[2,2,1],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""},{"name":"Hami Tamati-Wiparata","gym":"All Day Fitness","am":[10,5,0],"pro":[0,0,0],"tier":"am","req":"","flag":"","champ":""}],"proChamp":"","amChamp":"Waelin Kerekere","worldChamp":""},{"code":"SLW","kg":"63.5","name":"Super-lightweight","ranks":[{"name":"Lucas McAdam","gym":"Jackals Gym","am":[38,18,0],"pro":[6,2,0],"tier":"pro","req":"","flag":"","champ":""},{"name":"Ben Spears","gym":"Strikeforce","am":[18,7,0],"pro":[9,2,0],"tier":"pro","req":"","flag":"","champ":""},{"name":"Ben Karam","gym":"Jackals Martial Arts","am":[9,2,0],"pro":[0,0,0],"tier":"","req":"","flag":"Vacated title","champ":""},{"name":"Julian Jensen","gym":"Noble Fight Systems","am":[10,2,1],"pro":[0,0,0],"tier":"","req":"","flag":"Vacated title","champ":""},{"name":"Bayleigh McNamara","gym":"Remuera Lee Gar","am":[8,2,0],"pro":[0,0,0],"tier":"","req":"","flag":"","champ":"Amateur"}],"proChamp":"","amChamp":"Bayleigh McNamara","worldChamp":""},{"code":"WW","kg":"66.6","name":"Welterweight","ranks":[{"name":"Michael Isaac","gym":"House of Pain","am":[16,7,0],"pro":[1,3,0],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""},{"name":"Dion King","gym":"Aldephos","am":[15,4,0],"pro":[0,0,0],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""},{"name":"Kyrie Choudbury","gym":"Team Hardcore","am":[8,2,0],"pro":[0,0,0],"tier":"","req":"","flag":"","champ":"Amateur"},{"name":"Freeman Dombroski","gym":"Kenshikai","am":[9,5,0],"pro":[7,2,0],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""},{"name":"Andrew Fraenkel","gym":"MTI Wellington","am":[11,3,0],"pro":[0,0,0],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""},{"name":"Paul Tonga","gym":"Jackals Gym","am":[8,4,0],"pro":[0,0,0],"tier":"am","req":"","flag":"","champ":""},{"name":"Anton Freestone","gym":"Connect Striking","am":[6,1,0],"pro":[0,0,0],"tier":"am","req":"","flag":"","champ":""},{"name":"Dayne Burke","gym":"Rotorua Lee Gar","am":[5,4,0],"pro":[0,0,0],"tier":"am","req":"","flag":"","champ":""}],"proChamp":"","amChamp":"Kyrie Choudhury","worldChamp":""},{"code":"SWW","kg":"69.8","name":"Super-welterweight","ranks":[{"name":"Sam Fitzgerald","gym":"Hitman Lee Gar","am":[13,2,0],"pro":[1,0,0],"tier":"","req":"","flag":"","champ":"Pro"},{"name":"Rex Cooper","gym":"Strikeforce","am":[6,0,0],"pro":[0,0,0],"tier":"","req":"","flag":"","champ":""},{"name":"Sam McGowan","gym":"City Kickboxing","am":[8,2,0],"pro":[0,0,0],"tier":"pro","req":"","flag":"","champ":""},{"name":"Cameron Price","gym":"Wimbledon Muay Thai","am":[9,2,0],"pro":[0,0,0],"tier":"am","req":"","flag":"","champ":""},{"name":"Aidan Conradie","gym":"MTI Wellington","am":[13,1,0],"pro":[0,0,0],"tier":"am","req":"","flag":"","champ":""},{"name":"Reuben Martin","gym":"Matariki Kickboxing","am":[8,1,0],"pro":[0,0,0],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""},{"name":"Elai Bishop","gym":"Evolution Muay Thai","am":[8,2,0],"pro":[0,0,1],"tier":"am","req":"","flag":"","champ":""},{"name":"Benny McKay","gym":"City Lee Gar","am":[5,1,0],"pro":[0,0,0],"tier":"","req":"","flag":"","champ":"Amateur"}],"proChamp":"Sam Fitzgerald","amChamp":"Benny McKay","worldChamp":""},{"code":"MW","kg":"72.6","name":"Middleweight","ranks":[{"name":"Daniel Ruwanga","gym":"Strikeforce","am":[11,4,0],"pro":[4,3,0],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""},{"name":"Jon Anderson","gym":"Oliver MMA","am":[18,14,1],"pro":[1,2,0],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""},{"name":"Jack Young","gym":"Ngakanui","am":[18,6,0],"pro":[0,0,0],"tier":"pro","req":"","flag":"","champ":""},{"name":"Luca Carter","gym":"Warrior Training Academy","am":[9,2,0],"pro":[1,0,0],"tier":"pro","req":"","flag":"","champ":""},{"name":"Caz Melville","gym":"F16","am":[10,0,1],"pro":[0,1,0],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""},{"name":"Thomas Lewis","gym":"MTI Wellington","am":[9,1,0],"pro":[0,0,0],"tier":"","req":"","flag":"","champ":"Amateur"},{"name":"Cole Banks","gym":"Evolution Muay Thai","am":[7,6,0],"pro":[0,0,0],"tier":"am","req":"","flag":"","champ":""},{"name":"Lukas Taia","gym":"Ghost Fist Lee Gar","am":[8,3,0],"pro":[0,0,0],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""},{"name":"Josh Whitehead","gym":"","am":[12,2,0],"pro":[0,0,0],"tier":"","req":"","flag":"","champ":""},{"name":"Corrin Braddick","gym":"Art of Combat","am":[18,5,0],"pro":[2,1,0],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""}],"proChamp":"Michael Lynch","amChamp":"Thomas Lewis","worldChamp":""},{"code":"SMW","kg":"76.2","name":"Super-middleweight","ranks":[{"name":"Titus Proctor","gym":"Tihipuke Muay Thai","am":[17,2,0],"pro":[22,0,0],"tier":"","req":"","flag":"World champion","champ":"World"},{"name":"Jake McCowatt","gym":"Ngakanui","am":[27,11,0],"pro":[4,2,0],"tier":"pro","req":"","flag":"","champ":""},{"name":"Ashton Harris","gym":"Matariki Kickboxing Pukekohe","am":[15,3,2],"pro":[3,2,0],"tier":"pro","req":"","flag":"","champ":""},{"name":"Suran Juanmiry","gym":"SMAC","am":[23,6,2],"pro":[0,0,0],"tier":"","req":"","flag":"","champ":""},{"name":"DeeJ Edwards","gym":"Jackals","am":[14,6,0],"pro":[7,6,3],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""},{"name":"Dion Wilson","gym":"Freestyle MMA","am":[14,7,0],"pro":[0,0,0],"tier":"pro","req":"","flag":"","champ":""},{"name":"Cameron Adkin","gym":"City Lee Gar","am":[10,1,0],"pro":[0,1,0],"tier":"am-champ","req":"","flag":"","champ":""},{"name":"Kees Verheyen","gym":"Deep South","am":[7,6,0],"pro":[0,0,0],"tier":"am","req":"","flag":"","champ":""},{"name":"Zephyr Hawkins","gym":"Evolution Muay Thai","am":[15,6,2],"pro":[0,0,1],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""},{"name":"Zane Cleary","gym":"House Of Pain","am":[6,2,0],"pro":[0,0,0],"tier":"","req":"","flag":"","champ":""},{"name":"Jared Sayers","gym":"Wimbledon Muay Thai","am":[6,7,0],"pro":[0,0,0],"tier":"","req":"","flag":"","champ":""}],"proChamp":"","amChamp":"Damon Maireroa","worldChamp":"Titus Proctor"},{"code":"LHW","kg":"79.3","name":"Light-heavyweight","ranks":[{"name":"Iggy Phillips","gym":"He Toa Mai Dojo","am":[4,1,0],"pro":[2,1,0],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""},{"name":"Quade Samuels","gym":"Auckland MMA","am":[9,4,0],"pro":[1,0,0],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""},{"name":"Jack Green","gym":"Pathai Gym","am":[6,0,0],"pro":[0,0,0],"tier":"am","req":"","flag":"","champ":""}],"proChamp":"","amChamp":"Cameron Adkin","worldChamp":""},{"code":"CW","kg":"90.7","name":"Cruiserweight","ranks":[{"name":"Haimona Tamati Te-Paki","gym":"Core MMA/HOP","am":[26,6,0],"pro":[4,0,0],"tier":"pro","req":"","flag":"","champ":""},{"name":"James Craughwell","gym":"","am":null,"pro":null,"tier":"pro","req":"","flag":"","champ":""},{"name":"Karaitiana Adams","gym":"Tihipuke Muaythai","am":[10,4,0],"pro":[1,0,0],"tier":"","req":"","flag":"","champ":"Amateur"},{"name":"Hayden Crawford Williams","gym":"Freestyle MMA","am":[10,0,0],"pro":[2,0,0],"tier":"pro","req":"","flag":"","champ":""},{"name":"Leighton Fatamaka","gym":"Fox Den Combat Paeroa","am":[10,1,0],"pro":[0,0,0],"tier":"am","req":"","flag":"","champ":""},{"name":"Sitiveni Kutalele","gym":"Whakatane Fight Club","am":[7,3,0],"pro":[0,0,0],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""},{"name":"Dontay Lolomanaia","gym":"Wimbledon Muay Thai","am":[7,2,0],"pro":[0,0,0],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""},{"name":"Timani Ngungutau","gym":"Elite Thai Kickboxing","am":[9,1,0],"pro":[0,0,0],"tier":"am","req":"","flag":"","champ":""},{"name":"Tim Lawrence","gym":"Hybrid Training","am":[6,1,0],"pro":[0,0,0],"tier":"am","req":"","flag":"","champ":""},{"name":"Vake Tonga","gym":"Ghostfist Lee Gar","am":[7,4,0],"pro":[0,0,0],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""}],"proChamp":"","amChamp":"Karaitiana Adams","worldChamp":""},{"code":"HW","kg":"+90.7","name":"Heavyweight","ranks":[{"name":"Dchamed Armstrong","gym":"Team Alpha","am":[8,3,0],"pro":[4,0,0],"tier":"pro","req":"","flag":"","champ":""},{"name":"Earl Jay Pehi","gym":"AWA Kings","am":[11,4,0],"pro":[4,2,0],"tier":"pro","req":"","flag":"","champ":""},{"name":"Filisika Kaveinga","gym":"Hitman Lee Gar","am":[13,5,0],"pro":[0,1,0],"tier":"pro","req":"","flag":"","champ":""},{"name":"Lapa Halangahu","gym":"South Island Lee Gar","am":[15,6,1],"pro":[0,1,0],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""},{"name":"Daniel Paul","gym":"Jackals","am":[11,5,0],"pro":[0,2,0],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""},{"name":"Gabriel Tuteru","gym":"SALT","am":[6,1,0],"pro":[1,1,0],"tier":"","req":"Needs 2 Muay Thai wins","flag":"","champ":""},{"name":"Julez Tauu","gym":"Ghostfist Lee Gar","am":[10,4,0],"pro":[0,0,0],"tier":"pro","req":"","flag":"","champ":""},{"name":"Ronnie Lee","gym":"House of Pain","am":[8,3,0],"pro":[0,0,0],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""},{"name":"Kagan Gilcrest","gym":"Maui Muay Thai","am":[5,2,0],"pro":[0,0,0],"tier":"","req":"Needs 1 Muay Thai win","flag":"","champ":""},{"name":"Terry Rima","gym":"Ghostfist Lee Gar","am":[7,2,0],"pro":[0,0,0],"tier":"am","req":"","flag":"","champ":""}],"proChamp":"","amChamp":"","worldChamp":""}]},"results":[{"date":"2026-08-21","division":"Super-middleweight (76.2kg)","scope":"New Zealand","level":"Amateur","winner":"Damon Maireroa","opponent":"Kees Verheyen","event":"Art of War"},{"date":"2026-08-21","division":"Super-welterweight (69.8kg)","scope":"New Zealand","level":"Amateur","winner":"Benny McKay","opponent":"Jaycob Kerapa","event":"Art of War"},{"date":"2026-06-21","division":"Lightweight (61.25kg)","scope":"New Zealand","level":"Amateur","winner":"Waelin Kerekere","opponent":"Tomoki Huskinson","event":"Mae Mai"},{"date":"2026-06-21","division":"Super-lightweight (63.5kg)","scope":"New Zealand","level":"Amateur","winner":"Bayleigh McNamara","opponent":"Shian Gao","event":"Mae Mai"},{"date":"2026-04-17","division":"Middleweight (72.6kg)","scope":"New Zealand","level":"Amateur","winner":"Thomas Lewis","opponent":"Lukas Taia","event":"Art Of War 28"},{"date":"2026-04-17","division":"Welterweight (66.6kg)","scope":"New Zealand","level":"Amateur","winner":"Kyrie Choudbury","opponent":"Andrew Fraenkel","event":"Art Of War 28"},{"date":"2026-02-26","division":"Welterweight (66.6kg)","scope":"Oceania","level":"Pro","winner":"Moey Dahlan","opponent":"Michael Isaac","event":"1774 Promotions"},{"date":"2026-02-21","division":"Super-welterweight (69.8kg)","scope":"New Zealand","level":"Pro","winner":"Sam Fitzgerald","opponent":"Joe Parsons","event":"Mae Mai 2"},{"date":"2025-12-12","division":"Middleweight (72.6kg)","scope":"New Zealand","level":"Pro","winner":"Michael Lynch","opponent":"Daniel Ruwanga","event":"Art of War 27"},{"date":"2025-12-12","division":"Cruiserweight (90.7kg)","scope":"New Zealand","level":"Amateur","winner":"Karaitiana Adams","opponent":"Dontay Lolomanaia","event":"Art Of War 27"},{"date":"2025-12-05","division":"Light-heavyweight (79.3kg)","scope":"New Zealand","level":"Pro","winner":"Tommy Gunn","opponent":"Iggy Phillips","event":"Lights Out"},{"date":"2025-12-05","division":"Welterweight (66.6kg)","scope":"World","level":"Pro","winner":"Rose Amorim (Brazil)","opponent":"Emma Diprose (NZ) ()","event":"Lights Out"},{"date":"2025-12-05","division":"Super-middleweight (76.2kg)","scope":"World","level":"Pro","winner":"Titus Proctor","opponent":"Daniel Bonner (UK)","event":"Lights Out"},{"date":"2025-08-09","division":"Bantamweight (53.5kg)","scope":"New Zealand","level":"Pro","winner":"Bubba Tairua Bracken","opponent":"Sara Siraj","event":"TMT Showtime"},{"date":"2025-08-09","division":"Cruiserweight (90.7kg)","scope":"New Zealand","level":"Amateur","winner":"Karaitiana Adams","opponent":"Taratu Mankelow","event":"TMT Showtime"},{"date":"2025-08-08","division":"Super-lightweight (63.5kg)","scope":"New Zealand","level":"Amateur","winner":"Ben Karam","opponent":"Andre Fruh","event":"Art Of War 26"},{"date":"2025-08-08","division":"Super-welterweight (69.8kg)","scope":"New Zealand","level":"Amateur","winner":"Rex Cooper","opponent":"Reuben Martin","event":"Art Of War 26"},{"date":"2025-08-08","division":"Light-heavyweight (79.3kg)","scope":"New Zealand","level":"Amateur","winner":"Cameron Adkin","opponent":"Quade Samuels","event":"Art Of War 26"},{"date":"2025-06-27","division":"Welterweight (66.6kg)","scope":"New Zealand","level":"Amateur","winner":"Kyrie Choudbury","opponent":"Shaun Spencer","event":"Mae Mai 1"},{"date":"2025-06-27","division":"Middleweight (72.6kg)","scope":"New Zealand","level":"Pro","winner":"Michael Lynch","opponent":"Jon Anderson","event":"Mae Mai 1"},{"date":"2025-05-17","division":"Light-heavyweight (79.3kg)","scope":"New Zealand","level":"Pro","winner":"Iggy Phillips","opponent":"Chris Scanlan","event":"CP73"},{"date":"2025-03-29","division":"Super-lightweight (63.5kg)","scope":"New Zealand","level":"Amateur","winner":"Julian Jensen","opponent":"AJ Foster","event":"Lights Out"},{"date":"2025-03-29","division":"Super-middleweight (76.2kg)","scope":"New Zealand","level":"Pro","winner":"Titus Proctor","opponent":"Tony Jaggard","event":"Lights Out"},{"date":"2025-03-29","division":"Heavyweight (+90.7kg)","scope":"New Zealand","level":"Pro","winner":"Dchamed Armstrong","opponent":"James Craughwell","event":"Lights Out"},{"date":"2025-02-22","division":"Lightweight (61.25kg)","scope":"World","level":"Pro","winner":"Niahm Kinehan","opponent":"Kaitlyn Tucker","event":"MuayThai Super Series"},{"date":"2024-11-22","division":"Super-welterweight (69.8kg)","scope":"New Zealand","level":"Amateur","winner":"Rex Cooper","opponent":"Daniel Garcia","event":"Young Blood 19"},{"date":"2024-11-22","division":"Super-welterweight (69.8kg)","scope":"New Zealand","level":"Pro","winner":"Joeseph Parsons","opponent":"Michael Lynch","event":"Young Blood 19"},{"date":"2024-11-08","division":"Super-lightweight (63.5kg)","scope":"New Zealand","level":"Pro","winner":"Ben Spears","opponent":"Dominic Reed","event":"Art of War 24"},{"date":"2024-11-08","division":"Light-heavyweight (79.3kg)","scope":"New Zealand","level":"Pro","winner":"Slava Alexeichik","opponent":"Hayden Todd","event":"Art of War 24"},{"date":"2024-07-12","division":"Super-welterweight (69.8kg)","scope":"New Zealand","level":"Amateur","winner":"Rex Cooper","opponent":"Sam McGowan","event":"Art Of War 23"},{"date":"2024-07-12","division":"Super-lightweight (63.5kg)","scope":"New Zealand","level":"Pro","winner":"Ben Spears","opponent":"Reid Miller","event":"Art of War 23"},{"date":"2024-06-29","division":"Lightweight (61.25kg)","scope":"New Zealand","level":"Amateur","winner":"AJ Foster","opponent":"Zion Perry","event":"Muay Thai Royale"},{"date":"2024-06-29","division":"Super-middleweight (76.2kg)","scope":"New Zealand","level":"Pro","winner":"Titus Proctor","opponent":"Diego Beneduzzi","event":"MuayThai Royale"},{"date":"2024-06-29","division":"Lightweight (61.25kg)","scope":"International","level":"Pro","winner":"Kaitlyn Tucker","opponent":"Katie-Rose Mitchell (AU)","event":"MuayThai Royale"},{"date":"2024-06-22","division":"Heavyweight (+90.7kg)","scope":"New Zealand","level":"Pro","winner":"Geovana Peres","opponent":"Faith McMah","event":"Lights Out"},{"date":"2024-06-22","division":"Welterweight (66.6kg)","scope":"New Zealand","level":"Pro","winner":"Kayne Conlan","opponent":"Rob Horrocks","event":"Lights Out"},{"date":"2024-04-27","division":"Super-lightweight (63.5kg)","scope":"World","level":"Pro","winner":"Zoe Putorak","opponent":"Kaitlyn Tucker","event":"Muay Thai League 10"}],"news":[{"date":"2026-08-23","title":"Damon Maireroa wins the amateur super-middleweight title","summary":"He beat Kees Verheyen in a back-and-forth fight at Art of War in Auckland.","url":"https://www.wbcmuaythai.com/archives/9346","source":"WBC MuayThai"},{"date":"2026-08-21","title":"Benny McKay crowned amateur super-welterweight champion","summary":"McKay beat Jaycob Kerapa at Art of War in Auckland.","url":"https://www.wbcmuaythai.com/archives/9341","source":"WBC MuayThai"},{"date":"2026-04-18","title":"Two amateur titles decided at The Y in Auckland","summary":"Art of War hosted a night of amateur title fights, headlined by a welterweight championship.","url":"https://www.wbcmuaythai.com/news","source":"WBC MuayThai"},{"date":"2025-12-08","title":"Titus Proctor wins the WBC Muay Thai world super-middleweight title","summary":"The 21-year-old from Hamilton became the first New Zealand man to hold the WBC Muay Thai world belt.","url":"https://www.nzherald.co.nz/waikato-news/news/titus-proctor-wins-wbc-muay-thai-world-title-in-mt-maunganui-showdown/2VMUZNEFXJD5FF2IUJAYJCI37M/","source":"NZ Herald","approx":true}],"bouts":[]};
+
+const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
+const hue = name => { let h = 0; for (const c of name) h = (h * 31 + c.charCodeAt(0)) % 360; return h; };
+const fmt = (iso, o) => new Date(iso + (iso.length === 10 ? "T12:00:00+12:00" : "")).toLocaleDateString("en-NZ", { timeZone: "Pacific/Auckland", ...o });
+const dmy = iso => fmt(iso, { day: "numeric", month: "short", year: "numeric" });
+
+function portrait(name, photo, cls = "") {
+  if (photo) return `<div class="portrait ${cls}"><img src="${esc(photo)}" alt="${esc(name)}"></div>`;
+  const h = hue(name);
+  return `<div class="portrait ${cls}" role="img" aria-label="Photo placeholder for ${esc(name)}">
+    <svg viewBox="0 0 100 125" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <rect width="100" height="125" fill="hsl(${h} 28% 26%)"/>
+      <circle cx="50" cy="48" r="18" fill="hsl(${h} 24% 44%)"/>
+      <path d="M12 125c0-28 17-42 38-42s38 14 38 42z" fill="hsl(${h} 24% 44%)"/>
+    </svg></div>`;
+}
+const recLines = (am, pro) => {
+  const out = [];
+  if (am && (am[0] + am[1] + am[2])) out.push(`${am.join("-")} <small>amateur</small>`);
+  if (pro && (pro[0] + pro[1] + pro[2])) out.push(`${pro.join("-")} <small>pro</small>`);
+  return out.join("<br>") || `<small>Not listed</small>`;
+};
+
+/* Latest title fights (hero) */
+const NZ_RESULTS = DATA.results.filter(r => r.scope === "New Zealand" || r.scope === "World");
+document.getElementById("latest").innerHTML = NZ_RESULTS.slice(0, 3).map(r => `
+  <li><div class="res">${esc(r.winner)} <span>beat</span> ${esc(r.opponent)}</div>
+  <div class="meta">${esc(r.division)}${r.level ? ", " + esc(r.level.toLowerCase()) : ""}. ${esc(r.event)}, ${dmy(r.date)}.</div></li>`).join("");
+
+/* Champions */
+const GROUPS = [["World", "World champion"], ["Pro", "Professional champions"], ["Amateur", "Amateur champions"]];
+const KG_ORDER = ["53.5","55.3","57.1","58.9","61.25","63.5","66.6","69.8","72.6","76.2","79.3","90.7","+90.7"];
+document.getElementById("champGroups").innerHTML = GROUPS.map(([lvl, label]) => {
+  const list = DATA.champions.filter(c => c.level === lvl).sort((a, b) => KG_ORDER.indexOf(a.kg) - KG_ORDER.indexOf(b.kg) || a.gender.localeCompare(b.gender));
+  if (!list.length) return "";
+  return `<h3 class="group">${label}</h3><div class="champs">` + list.map(c => `
+    <article class="champ">
+      ${portrait(c.name, c.photo)}
+      <div class="belt">${esc(c.division)}${c.gender === "F" ? ", women" : ""}</div>
+      <div class="info">
+        <h3>${esc(c.name)}</h3>
+        ${c.gym ? `<p class="gym">${esc(c.gym)}</p>` : ""}
+        <dl>
+          ${(c.am || c.pro) ? `<dt>Record</dt><dd class="rec">${recLines(c.am, c.pro)}</dd>` : ""}
+          ${c.since ? `<dt>Champion since</dt><dd>${dmy(c.since)}</dd>` : ""}
+          ${c.opponent ? `<dt>Won against</dt><dd>${esc(c.opponent)}</dd>` : ""}
+          <dt>Defences</dt><dd>${c.defences || 0}</dd>
+        </dl>
+      </div>
+    </article>`).join("") + `</div>`;
+}).join("");
+
+/* Rankings */
+let gender = "M", level = "Pro", divIdx = 0;
+const tabs = document.getElementById("tabs"), table = document.getElementById("rankTable"), holders = document.getElementById("holders"), pending = document.getElementById("pending");
+function renderTabs() {
+  const divs = DATA.divisions[gender];
+  tabs.innerHTML = divs.map((d, i) => `<button role="tab" data-i="${i}" aria-selected="${i === divIdx}">${esc(d.name)} ${esc(d.kg)}kg</button>`).join("");
+}
+function row(rank, name, gym, am, pro, tag, note, champ) {
+  return `<tr class="${champ ? "is-champ" : ""}">
+    <td class="rank">${rank}</td>
+    <td><div class="who">${portrait(name, "")}<div>${esc(name)}${tag || ""}${note ? `<small>${esc(note)}</small>` : ""}</div></div></td>
+    <td>${esc(gym) || "<small>Not listed</small>"}</td>
+    <td class="rec">${recLines(am, pro)}</td></tr>`;
+}
+function renderTable() {
+  const d = DATA.divisions[gender][divIdx];
+  const isPro = level === "Pro";
+  const champs = DATA.champions.filter(c => c.gender === gender && c.kg === d.kg && (isPro ? (c.level === "Pro" || c.level === "World") : c.level === "Amateur"))
+                               .sort((a, b) => (a.level === "World" ? -1 : 1) - (b.level === "World" ? -1 : 1));
+  const label = isPro ? "Professional" : "Amateur";
+  holders.innerHTML = champs.length
+    ? champs.map(c => `<span>${c.level === "World" ? "World champion" : label + " champion"}: <b>${esc(c.name)}</b></span>`).join("")
+    : `<span>${label} champion: <span class="vacant">Vacant</span></span>`;
+  const mine = d.ranks.filter(r => !r.champ && (isPro ? (r.tier === "pro" || r.tier === "pro-champ") : (r.tier === "am" || r.tier === "am-champ")));
+  const champRows = champs.map(c => row("C", c.name, c.gym, c.am, c.pro, `<span class="tag">${c.level === "World" ? "World champion" : "Champion"}</span>`, "", true)).join("");
+  const rows = mine.map((r, i) => row(i + 1, r.name, r.gym, r.am, r.pro, "", r.req, false)).join("");
+  table.innerHTML = `<caption style="position:absolute;left:-9999px">${label} ${esc(d.name)} ${esc(d.kg)}kg rankings</caption>
+    <thead><tr><th>Rank</th><th>Fighter</th><th>Gym</th><th>Record</th></tr></thead>
+    <tbody>${champRows + rows || `<tr><td colspan="4">No ${label.toLowerCase()} rankings for this division yet.</td></tr>`}</tbody>`;
+
+  const rest = d.ranks.filter(r => !r.champ && !r.tier);
+  pending.innerHTML = rest.length ? `<h3 class="sub">Not yet classified</h3>
+    <p class="fine" style="margin:0 0 12px">These fighters are in the records file for this division but are not marked as eligible for a professional or amateur title.</p>
+    <div class="table-scroll"><table><thead><tr><th>Fighter</th><th>Gym</th><th>Record</th><th>Requirement</th></tr></thead><tbody>` +
+    rest.map(r => `<tr><td><div class="who">${portrait(r.name, "")}<div>${esc(r.name)}${r.flag ? `<span class="tag soft">${esc(r.flag)}</span>` : ""}</div></div></td><td>${esc(r.gym) || "<small>Not listed</small>"}</td><td class="rec">${recLines(r.am, r.pro)}</td><td>${esc(r.req) || "<small>None listed</small>"}</td></tr>`).join("") +
+    `</tbody></table></div>` : "";
+}
+tabs.addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; divIdx = +b.dataset.i; renderTabs(); renderTable(); });
+document.querySelectorAll("#segG button").forEach(b => b.addEventListener("click", () => {
+  gender = b.dataset.g; divIdx = 0;
+  document.querySelectorAll("#segG button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  renderTabs(); renderTable();
+}));
+document.querySelectorAll("#segL button").forEach(b => b.addEventListener("click", () => {
+  level = b.dataset.l;
+  document.querySelectorAll("#segL button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  renderTable();
+}));
+renderTabs(); renderTable();
+
+/* Title fight results */
+const resTable = document.getElementById("resTable"), moreBtn = document.getElementById("moreBtn");
+let showAll = false; const LIMIT = 10;
+function renderResults() {
+  const list = showAll ? DATA.results : DATA.results.slice(0, LIMIT);
+  const kind = r => r.scope === "New Zealand" ? (r.level || "") : r.scope + (r.level ? " " + r.level.toLowerCase() : "");
+  resTable.innerHTML = `<thead><tr><th>Date</th><th>Division</th><th>Title</th><th>Winner</th><th>Opponent</th><th>Event</th></tr></thead><tbody>` +
+    list.map(r => `<tr><td style="white-space:nowrap">${dmy(r.date)}</td><td>${esc(r.division)}</td><td>${esc(kind(r) === "Pro" || kind(r) === "Amateur" ? kind(r) + " national" : kind(r))}</td><td><b>${esc(r.winner)}</b></td><td>${esc(r.opponent)}</td><td>${esc(r.event)}</td></tr>`).join("") + `</tbody>`;
+  moreBtn.textContent = showAll ? "Show fewer results" : `Show all ${DATA.results.length} results`;
+  moreBtn.hidden = DATA.results.length <= LIMIT;
+}
+moreBtn.addEventListener("click", () => { showAll = !showAll; renderResults(); });
+renderResults();
+
+/* Upcoming bouts */
+const upcoming = (DATA.bouts || []).filter(b => new Date(b.date) > new Date()).sort((a, b) => new Date(a.date) - new Date(b.date));
+document.getElementById("boutList").innerHTML = upcoming.length ? upcoming.map(b => `
+  <li class="bout ${b.title ? "title-fight" : ""}">
+    <div class="date"><span class="d">${fmt(b.date, { day: "numeric" })}</span><span class="m">${fmt(b.date, { month: "short" })}</span></div>
+    <div><h3>${esc(b.a)} vs ${esc(b.b)}${b.title ? '<span class="tag">Title fight</span>' : ""}</h3><p>${esc(b.division)}, ${b.rounds} rounds</p></div>
+    <div class="where">${esc(b.city)}</div>
+  </li>`).join("") : `<li class="empty"><h3>No bouts announced yet</h3><p>Title fights and main card matchups will appear here once they are confirmed.</p></li>`;
+
+/* News */
+document.getElementById("newsList").innerHTML = DATA.news.map(n => `
+  <article class="story"><a href="${esc(n.url)}" target="_blank" rel="noopener">
+    <time datetime="${n.date}">${n.approx ? fmt(n.date, { month: "long", year: "numeric" }) : dmy(n.date)}</time>
+    <h3>${esc(n.title)}</h3><p>${esc(n.summary)}</p><span class="src">${esc(n.source)}</span></a></article>`).join("");
+</script>
+</body>
+</html>
