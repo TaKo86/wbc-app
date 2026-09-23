@@ -226,6 +226,36 @@
   opacity: 0.9;
 }
 
+.form-page { max-width: 760px; }
+.fighter-form { display: grid; gap: 16px; }
+.fighter-form label, .admin-login label { display: grid; gap: 6px; font-weight: 700; color: #30423e; }
+.fighter-form input, .fighter-form select, .admin-login input { width: 100%; border: 1px solid rgba(22, 64, 51, 0.25); border-radius: 3px; padding: 10px; color: #102c24; background: #fff; }
+.fighter-form fieldset { border: 1px solid rgba(22, 64, 51, 0.16); padding: 14px; }
+.fighter-form legend { color: #087b5d; font-weight: 800; }
+.record-inputs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.recent-fight-inputs { display: grid; gap: 8px; }
+.recent-fight-row { display: grid; grid-template-columns: 28px 1fr 140px; gap: 8px; align-items: center; }
+.recent-fight-row input, .recent-fight-row select { border: 1px solid rgba(22, 64, 51, 0.25); border-radius: 3px; padding: 8px; color: #102c24; background: #fff; }
+.primary-action, .submission-actions button { border: 0; border-radius: 3px; padding: 10px 14px; background: #087b5d; color: #fff; font-weight: 800; cursor: pointer; }
+.primary-action:disabled, .submission-actions button:disabled { opacity: .55; cursor: not-allowed; }
+.form-message { margin-top: 16px; padding: 12px; background: #e2f2eb; color: #075b47 !important; }
+.admin-login { display: flex; align-items: end; gap: 12px; margin: 20px 0; }
+.admin-login label { flex: 1; }
+.submission-list { display: grid; gap: 12px; }
+.submission-card { display: flex; justify-content: space-between; gap: 20px; align-items: center; }
+.submission-card h2 { margin: 8px 0 2px; font-size: 1.2rem; }
+.submission-card p { margin: 3px 0; }
+.submission-actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: end; }
+.submission-actions button { background: #075b47; }
+.submission-actions button:last-child { background: #8f3f34; }
+.submission-edit { display: grid; gap: 8px; min-width: 210px; }
+.submission-edit input { border: 1px solid rgba(22, 64, 51, 0.25); border-radius: 3px; padding: 8px; }
+.submission-edit button { border: 0; border-radius: 3px; padding: 8px 10px; background: #075b47; color: #fff; font-weight: 800; cursor: pointer; }
+.status { display: inline-block; padding: 3px 7px; border-radius: 3px; font-size: .72rem; font-weight: 800; text-transform: uppercase; }
+.status-pending { background: #f5e8b2; color: #64521b; }
+.status-approved { background: #d7efe1; color: #075b47; }
+.status-rejected { background: #f5d8d4; color: #8f3f34; }
+
 @media (max-width: 768px) {
   .app-shell {
     width: min(100% - 20px, 1200px);
@@ -247,4 +277,7 @@
     margin-top: 14px;
     padding: 18px 14px;
   }
+
+  .admin-login, .submission-card { align-items: stretch; flex-direction: column; }
+  .record-inputs { grid-template-columns: 1fr; }
 }

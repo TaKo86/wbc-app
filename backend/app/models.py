@@ -34,6 +34,12 @@ class BoutStatus(str, enum.Enum):
     cancelled = "cancelled"
 
 
+class SubmissionStatus(str, enum.Enum):
+    pending = "pending"
+    approved = "approved"
+    rejected = "rejected"
+
+
 class Gym(Base):
     __tablename__ = "gyms"
     id: Mapped[int] = mapped_column(primary_key=True)
@@ -64,6 +70,51 @@ class Fighter(Base):
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
 
     gym: Mapped[Gym | None] = relationship(back_populates="fighters")
+
+
+class FighterSubmission(Base):
+    __tablename__ = "fighter_submissions"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    submitted_name: Mapped[str] = mapped_column(String)
+    submitted_email: Mapped[str] = mapped_column(String)
+    name: Mapped[str] = mapped_column(String)
+    gender: Mapped[Gender] = mapped_column(Enum(Gender, name="gender_t"))
+    gym_name: Mapped[str | None] = mapped_column(String, nullable=True)
+    am_wins: Mapped[int] = mapped_column(Integer, default=0)
+    am_losses: Mapped[int] = mapped_column(Integer, default=0)
+    am_draws: Mapped[int] = mapped_column(Integer, default=0)
+    pro_wins: Mapped[int] = mapped_column(Integer, default=0)
+    pro_losses: Mapped[int] = mapped_column(Integer, default=0)
+    pro_draws: Mapped[int] = mapped_column(Integer, default=0)
+    status: Mapped[SubmissionStatus] = mapped_column(
+        Enum(SubmissionStatus, name="submission_status_t"),
+        default=SubmissionStatus.pending,
+    )
+    admin_note: Mapped[str | None] = mapped_column(Text, nullable=True)
+    reviewed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+    recent_fights: Mapped[list["SubmissionFight"]] = relationship(
+        back_populates="submission",
+        cascade="all, delete-orphan",
+        order_by="SubmissionFight.fight_number",
+    )
+
+
+class SubmissionFight(Base):
+    __tablename__ = "submission_fights"
+    __table_args__ = (UniqueConstraint("submission_id", "fight_number"),)
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    submission_id: Mapped[int] = mapped_column(
+        ForeignKey("fighter_submissions.id", ondelete="CASCADE")
+    )
+    fight_number: Mapped[int] = mapped_column(SmallInteger)
+    opponent_name: Mapped[str] = mapped_column(String)
+    result: Mapped[str] = mapped_column(String(20))
+
+    submission: Mapped[FighterSubmission] = relationship(back_populates="recent_fights")
 
 
 class WeightClass(Base):

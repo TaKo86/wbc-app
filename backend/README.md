@@ -1,7 +1,7 @@
 # WBC Muay Thai NZ — backend
 
-FastAPI + PostgreSQL API for the site. Read-only for now (GET endpoints only) — write/admin
-endpoints can come later once you've decided who updates data and how.
+FastAPI + PostgreSQL API for the site. Public fighter submissions are held for admin review
+before they are written to the live fighters table.
 
 ## Setup
 
@@ -16,6 +16,12 @@ Create the database, then load the schema:
 ```bash
 createdb wbc_muaythai
 psql $DATABASE_URL -f db/schema.sql
+```
+
+For an existing deployment, run the one-time migration instead:
+
+```bash
+psql $DATABASE_URL -f db/migrations/001_fighter_submissions.sql
 ```
 
 Load the data that's already been extracted from your spreadsheet:
@@ -40,6 +46,16 @@ Docs at http://localhost:8000/docs.
 - `GET /results?limit=&offset=` — title fight history, newest first
 - `GET /bouts?include_past=false` — scheduled bouts (empty until some are added)
 - `GET /news?limit=`
+- `POST /submissions` — public fighter record submission; remains pending by default
+- `GET /submissions` — admin-only submission queue; requires `X-Admin-Key`
+- `PATCH /submissions/{id}` — admin-only correction of submitted data
+- `POST /submissions/{id}/approve` — admin-only promotion into `fighters`
+- `POST /submissions/{id}/reject` — admin-only rejection with an optional note
+- `DELETE /submissions/{id}` — admin-only removal
+
+Set `ADMIN_API_KEY` to a long random secret in production. Do not use the development default.
+The frontend Admin tab sends this key in the `X-Admin-Key` header; a production deployment should
+eventually put the admin screen behind proper user authentication and roles.
 
 ## How the schema is organised
 

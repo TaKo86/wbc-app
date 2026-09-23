@@ -21,6 +21,32 @@ export interface Fighter {
   record: Record;
 }
 
+export interface FighterSubmission {
+  id: number;
+  submitted_name: string;
+  submitted_email: string;
+  name: string;
+  gender: Gender;
+  gym_name: string | null;
+  recent_fights: SubmissionFight[];
+  am_wins: number;
+  am_losses: number;
+  am_draws: number;
+  pro_wins: number;
+  pro_losses: number;
+  pro_draws: number;
+  status: "pending" | "approved" | "rejected";
+  admin_note: string | null;
+  reviewed_at: string | null;
+  created_at: string;
+}
+
+export interface SubmissionFight {
+  fight_number: number;
+  opponent_name: string;
+  result: "Win" | "Loss" | "Draw" | "No contest" | "Decision win" | "Decision loss" | "TKO win" | "TKO loss";
+}
+
 export interface WeightClass {
   id: number;
   gender: string; // "M" | "F"

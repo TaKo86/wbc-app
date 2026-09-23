@@ -1,6 +1,6 @@
 from datetime import date, datetime
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 
 class GymOut(BaseModel):
@@ -33,6 +33,64 @@ class FighterOut(BaseModel):
             photo_url=f.photo_url,
             record=Record(am=(f.am_wins, f.am_losses, f.am_draws), pro=(f.pro_wins, f.pro_losses, f.pro_draws)),
         )
+
+
+class SubmissionFight(BaseModel):
+    fight_number: int = Field(ge=1, le=5)
+    opponent_name: str = Field(min_length=2, max_length=120)
+    result: str = Field(
+        pattern="^(Win|Loss|Draw|No contest|Decision win|Decision loss|TKO win|TKO loss)$"
+    )
+
+
+class FighterSubmissionCreate(BaseModel):
+    submitted_name: str = Field(min_length=2, max_length=120)
+    submitted_email: str = Field(min_length=5, max_length=254)
+    name: str = Field(min_length=2, max_length=120)
+    gender: str = Field(pattern="^[MF]$")
+    gym_name: str | None = Field(default=None, max_length=120)
+    am_wins: int = Field(default=0, ge=0)
+    am_losses: int = Field(default=0, ge=0)
+    am_draws: int = Field(default=0, ge=0)
+    pro_wins: int = Field(default=0, ge=0)
+    pro_losses: int = Field(default=0, ge=0)
+    pro_draws: int = Field(default=0, ge=0)
+    recent_fights: list[SubmissionFight] = Field(default_factory=list, max_length=5)
+
+    @field_validator("recent_fights")
+    @classmethod
+    def validate_recent_fights(cls, value):
+        numbers = [fight.fight_number for fight in value]
+        if len(numbers) != len(set(numbers)):
+            raise ValueError("Recent fight numbers must be unique")
+        return value
+
+
+class FighterSubmissionUpdate(BaseModel):
+    name: str | None = Field(default=None, min_length=2, max_length=120)
+    gender: str | None = Field(default=None, pattern="^[MF]$")
+    gym_name: str | None = Field(default=None, max_length=120)
+    am_wins: int | None = Field(default=None, ge=0)
+    am_losses: int | None = Field(default=None, ge=0)
+    am_draws: int | None = Field(default=None, ge=0)
+    pro_wins: int | None = Field(default=None, ge=0)
+    pro_losses: int | None = Field(default=None, ge=0)
+    pro_draws: int | None = Field(default=None, ge=0)
+    admin_note: str | None = Field(default=None, max_length=2000)
+    recent_fights: list[SubmissionFight] | None = Field(default=None, max_length=5)
+
+
+class SubmissionDecision(BaseModel):
+    admin_note: str | None = Field(default=None, max_length=2000)
+
+
+class FighterSubmissionOut(FighterSubmissionCreate):
+    model_config = ConfigDict(from_attributes=True)
+    id: int
+    status: str
+    admin_note: str | None
+    reviewed_at: datetime | None
+    created_at: datetime
 
 
 class WeightClassOut(BaseModel):

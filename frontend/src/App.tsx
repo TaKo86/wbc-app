@@ -5,8 +5,10 @@ import { RankingsPage } from "./RankingsPage";
 import { BoutsPage } from "./BoutsPage";
 import { ResultsPage } from "./ResultsPage";
 import { NewsPage } from "./NewsPage";
+import { SubmitFighterPage } from "./SubmitFighterPage";
+import { AdminSubmissionsPage } from "./AdminSubmissionsPage";
 
-type Tab = "champions" | "rankings" | "bouts" | "results" | "news";
+type Tab = "champions" | "rankings" | "bouts" | "results" | "news" | "submit" | "admin";
 
 const TABS: { key: Tab; label: string }[] = [
   { key: "champions", label: "Champions" },
@@ -14,6 +16,8 @@ const TABS: { key: Tab; label: string }[] = [
   { key: "bouts", label: "Bouts" },
   { key: "results", label: "Results" },
   { key: "news", label: "News" },
+  { key: "submit", label: "Submit fighter" },
+  { key: "admin", label: "Admin review" },
 ];
 
 function App() {
@@ -51,6 +55,8 @@ function App() {
         {tab === "bouts" && <BoutsPage />}
         {tab === "results" && <ResultsPage />}
         {tab === "news" && <NewsPage />}
+        {tab === "submit" && <SubmitFighterPage />}
+        {tab === "admin" && <AdminSubmissionsPage />}
       </main>
     </div>
   );

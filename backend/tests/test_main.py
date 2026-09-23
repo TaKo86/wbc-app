@@ -1,4 +1,5 @@
 from app.models import Fighter, Gender, WeightClass, Title, TitleLevel, Ranking
+from app.config import settings
 
 
 def test_rankings_amateur_with_seeded_data(client, db_session):
@@ -88,3 +89,37 @@ def test_bouts(client):
 def test_news(client):
     response = client.get("/news")
     assert response.status_code == 200
+
+
+def test_fighter_submission_requires_admin_for_review_and_approves(client, db_session):
+    payload = {
+        "submitted_name": "Coach Test",
+        "submitted_email": "coach@example.com",
+        "name": "New Fighter",
+        "gender": "M",
+        "gym_name": "Test Gym",
+        "am_wins": 4,
+        "am_losses": 1,
+        "am_draws": 0,
+        "recent_fights": [
+            {"fight_number": 1, "opponent_name": "Opponent One", "result": "Win"},
+            {"fight_number": 2, "opponent_name": "Opponent Two", "result": "Loss"},
+        ],
+    }
+
+    created = client.post("/submissions", json=payload)
+    assert created.status_code == 201
+    submission_id = created.json()["id"]
+
+    assert client.get("/submissions").status_code == 401
+
+    headers = {"X-Admin-Key": settings.admin_api_key}
+    pending = client.get("/submissions", headers=headers)
+    assert pending.status_code == 200
+    assert pending.json()[0]["status"] == "pending"
+    assert pending.json()[0]["recent_fights"][1]["opponent_name"] == "Opponent Two"
+
+    approved = client.post(f"/submissions/{submission_id}/approve", headers=headers)
+    assert approved.status_code == 200
+    assert approved.json()["name"] == "New Fighter"
+    assert approved.json()["record"]["am"] == [4, 1, 0]
