@@ -15,9 +15,9 @@ export function BoutsPage() {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <p>Loading bouts...</p>;
-  if (error) return <p>Error loading bouts: {error}</p>;
-  if (bouts.length === 0) return <p>No upcoming bouts scheduled.</p>;
+  if (loading) return <p className="page-muted">Loading bouts...</p>;
+  if (error) return <p className="page-muted">Error loading bouts: {error}</p>;
+  if (bouts.length === 0) return <p className="page-muted">No upcoming bouts scheduled.</p>;
 
   return (
     <div>

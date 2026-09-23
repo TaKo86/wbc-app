@@ -1,8 +1,30 @@
 :root {
+  font-family: "Arial Narrow", "Trebuchet MS", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #111b19;
+  background: #e9eceb;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background:
+    linear-gradient(135deg, transparent 0 18%, rgba(255, 255, 255, 0.8) 18.2% 19%, transparent 19.2% 34%, rgba(255, 255, 255, 0.75) 34.2% 35%, transparent 35.2%),
+    repeating-linear-gradient(135deg, #e5e8e7 0 2px, #eef0ef 2px 6px, #e5e8e7 6px 8px);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: transparent;
 }
 
 #root {
@@ -10,10 +32,15 @@
   min-height: 100vh;
 }
 
-html,
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100%;
+button,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
 }
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { api } from "./api/client";
 import type { Champion } from "./api/types";
+import { ChampionCard } from "./components/ChampionCard";
 
 export function ChampionsPage() {
   const [champions, setChampions] = useState<Champion[]>([]);
@@ -21,16 +22,9 @@ export function ChampionsPage() {
   return (
     <div>
       <h1>Champions</h1>
-      <ul>
+      <ul className="champion-grid">
         {champions.map((c) => (
-          <li key={c.title_id}>
-            <strong>{c.weight_class.name}</strong> ({c.level}, {c.scope}) —{" "}
-            {c.fighter.name}
-            {c.won_against && ` (won against ${c.won_against})`}
-            {c.event && ` at ${c.event}`}
-            {" — since "}
-            {new Date(c.since).toLocaleDateString()}
-          </li>
+          <ChampionCard key={c.title_id} champion={c} />
         ))}
       </ul>
     </div>

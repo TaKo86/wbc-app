@@ -15,9 +15,9 @@ export function ResultsPage() {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <p>Loading results...</p>;
-  if (error) return <p>Error loading results: {error}</p>;
-  if (results.length === 0) return <p>No results yet.</p>;
+  if (loading) return <p className="page-muted">Loading results...</p>;
+  if (error) return <p className="page-muted">Error loading results: {error}</p>;
+  if (results.length === 0) return <p className="page-muted">No results yet.</p>;
 
   return (
     <div>

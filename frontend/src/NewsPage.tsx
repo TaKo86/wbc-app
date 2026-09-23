@@ -15,9 +15,9 @@ export function NewsPage() {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <p>Loading news...</p>;
-  if (error) return <p>Error loading news: {error}</p>;
-  if (news.length === 0) return <p>No news yet.</p>;
+  if (loading) return <p className="page-muted">Loading news...</p>;
+  if (error) return <p className="page-muted">Error loading news: {error}</p>;
+  if (news.length === 0) return <p className="page-muted">No news yet.</p>;
 
   return (
     <div>

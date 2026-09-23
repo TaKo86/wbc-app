@@ -25,7 +25,7 @@ export function RankingsPage() {
     <div>
       <h1>Rankings</h1>
 
-      <div>
+      <div className="filter-row">
         <label>
           Gender:{" "}
           <select value={gender} onChange={(e) => setGender(e.target.value as Gender)}>
