@@ -38,5 +38,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Create test .env
+        run: |
+          echo "DATABASE_URL=postgresql+psycopg2://user:password@localhost/test_db" >> .env
+          echo "CORS_ORIGINS=http://localhost:5173" >> .env
+
       - name: Run tests
         run: pytest -v
