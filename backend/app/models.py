@@ -87,7 +87,14 @@ class Title(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     weight_class_id: Mapped[int] = mapped_column(ForeignKey("weight_classes.id", ondelete="CASCADE"))
     level: Mapped[TitleLevel] = mapped_column(Enum(TitleLevel, name="title_level_t"))
-    scope: Mapped[TitleScope] = mapped_column(Enum(TitleScope, name="title_scope_t"), default=TitleScope.NZ)
+    scope: Mapped[TitleScope] = mapped_column(
+        Enum(
+            TitleScope,
+            name="title_scope_t",
+            values_callable=lambda enum_cls: [member.value for member in enum_cls],
+        ),
+        default=TitleScope.NZ.value,
+    )
 
     weight_class: Mapped[WeightClass] = relationship(back_populates="titles")
     fights: Mapped[list["TitleFight"]] = relationship(back_populates="title", order_by="TitleFight.fight_date")
